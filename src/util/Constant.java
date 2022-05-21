@@ -14,8 +14,8 @@ import java.awt.Font;
 
 public class Constant {
 	// Window size
-	public static final int FRAME_WIDTH = 420;
-	public static final int FRAME_HEIGHT = 640;
+	public static final int FRAME_WIDTH = 400;
+	public static final int FRAME_HEIGHT = 600;
 
 	// Game Title
 	public static final String GAME_TITLE = "OOP_PROJECT 'FLAPPY BIRD' BUILD SUCESSFUL TEAM";

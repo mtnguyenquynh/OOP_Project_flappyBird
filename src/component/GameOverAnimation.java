@@ -45,20 +45,20 @@ public class GameOverAnimation {
         String str = Long.toString(bird.getCurrentScore());
         x -= GameUtil.getStringWidth(Constant.SCORE_FONT, str) >> 1;
         y += GameUtil.getStringHeight(Constant.SCORE_FONT, str);
-        g.drawString(str, x, y);
+        g.drawString(str, x+10, y-15);
 
         // Plot the highest score
         if (bird.getBestScore() > 0) {
             str = Long.toString(bird.getBestScore());
             x = (Constant.FRAME_WIDTH + scoreImg.getWidth() / 2 >> 1) - SCORE_LOCATE;
             x -= GameUtil.getStringWidth(Constant.SCORE_FONT, str) >> 1;
-            g.drawString(str, x, y);
+            g.drawString(str, x-15, y-15);
         }
 
         // Drawing continues the game, the image flashes
         final int COUNT = 30; //  Blink Cycle
         if (flash++ > COUNT)
-            GameUtil.drawImage(againImg,Constant.FRAME_WIDTH - againImg.getWidth() >> 1, Constant.FRAME_HEIGHT / 5 * 3, g);
+            GameUtil.drawImage(againImg,Constant.FRAME_WIDTH - againImg.getWidth() >> 1, Constant.FRAME_HEIGHT / 5 *3+50, g);
         if (flash == COUNT * 2) // Reset blinking parameters
             flash = 0;
     }
