@@ -37,7 +37,7 @@ public class GameBackground {
 	// Drawing method
 	public void draw(Graphics g, Bird bird) {
 		// Drawing background color
-		g.setColor(Constant.BG_COLOR);
+		//g.setColor(Constant.BG_COLOR);
 		g.fillRect(0, 0, Constant.FRAME_WIDTH, Constant.FRAME_HEIGHT);
 
 		// Get the size of the background image

@@ -37,15 +37,15 @@ public class GameOverAnimation {
         y = Constant.FRAME_HEIGHT / 3;
         g.drawImage(scoreImg, x, y, null);
 
-        // Plotting the Bureau's score 
-        g.setColor(Color.white);
+        // Plotting the Bird's score 
+        g.setColor(Color.yellow);
         g.setFont(Constant.SCORE_FONT);
         x = (Constant.FRAME_WIDTH - scoreImg.getWidth() / 2 >> 1) + SCORE_LOCATE;// Position compensation
         y += scoreImg.getHeight() >> 1;
         String str = Long.toString(bird.getCurrentScore());
         x -= GameUtil.getStringWidth(Constant.SCORE_FONT, str) >> 1;
         y += GameUtil.getStringHeight(Constant.SCORE_FONT, str);
-        g.drawString(str, x+10, y-15);
+        g.drawString(str, x+5, y-15);
 
         // Plot the highest score
         if (bird.getBestScore() > 0) {

@@ -58,7 +58,7 @@ public class Constant {
 	public static final int GAME_SPEED = 4;
  
 	// Game background color
-	public static final Color BG_COLOR = new Color(0x4bc4cf);
+	//public static final Color BG_COLOR = new Color(0x4bc4cf);
 
 	// Game refresh rate
 	public static final int FPS = 1000 / 30;
