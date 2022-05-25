@@ -39,7 +39,7 @@ public class Game extends Frame {
     public Game() {
         initFrame(); // initialize game frame
         setVisible(true); 
-        //initGame(); // initialize game object
+        initGame(); // initialize game object
     }
 
     // Method initialize frame
