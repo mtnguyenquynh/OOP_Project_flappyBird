@@ -2,10 +2,12 @@ package app;
 
 import component.Bird;
 
+
 import component.GameBackground;
 import component.GameForeground;
 import component.WelcomeAnimation;
 import component.GameElementLayer;
+import util.Constant;
 
 import static util.Constant.FRAME_HEIGHT;
 import static util.Constant.FRAME_WIDTH;
@@ -16,6 +18,7 @@ import static util.Constant.GAME_TITLE;
 
 import java.awt.Frame;
 import java.awt.Graphics;
+import java.awt.Toolkit;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
 
@@ -48,6 +51,7 @@ public class Game extends Frame {
         setTitle(GAME_TITLE); // Frame title
         setLocation(FRAME_X, FRAME_Y); // Frame location
         setResizable(false); 
+        setIconImage(Toolkit.getDefaultToolkit().getImage(Constant.ICON_IMG_PATH));
         
         addWindowListener(new WindowAdapter() {
             @Override

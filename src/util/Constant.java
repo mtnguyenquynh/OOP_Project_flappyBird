@@ -26,6 +26,7 @@ public class Constant {
 	public static final int FRAME_Y = 100;
 
 	// Image Resource Path
+	public static final String ICON_IMG_PATH = "resources/img/icon.png";
 	public static final String BG_IMG_PATH = "resources/img/background.png"; 
 	// Pictures of small birds
 	public static final String[][] BIRDS_IMG_PATH = {
