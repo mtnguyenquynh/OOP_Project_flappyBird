@@ -35,7 +35,7 @@ public class GameOverAnimation {
         // Drawing the scoreboard
         x = Constant.FRAME_WIDTH - scoreImg.getWidth() >> 1;
         y = Constant.FRAME_HEIGHT / 3;
-        g.drawImage(scoreImg, x, y, null);
+        g.drawImage(scoreImg, x+8, y, null);
 
         // Plotting the Bird's score 
         g.setColor(Color.yellow);
@@ -45,14 +45,14 @@ public class GameOverAnimation {
         String str = Long.toString(bird.getCurrentScore());
         x -= GameUtil.getStringWidth(Constant.SCORE_FONT, str) >> 1;
         y += GameUtil.getStringHeight(Constant.SCORE_FONT, str);
-        g.drawString(str, x+5, y-15);
+        g.drawString(str, x+8, y-15);
 
         // Plot the highest score
         if (bird.getBestScore() > 0) {
             str = Long.toString(bird.getBestScore());
             x = (Constant.FRAME_WIDTH + scoreImg.getWidth() / 2 >> 1) - SCORE_LOCATE;
             x -= GameUtil.getStringWidth(Constant.SCORE_FONT, str) >> 1;
-            g.drawString(str, x-15, y-15);
+            g.drawString(str, x-10, y-15);
         }
 
         // Drawing continues the game, the image flashes

@@ -35,7 +35,7 @@ public class WelcomeAnimation {
 	public void draw(Graphics g) {
 		int x = (Constant.FRAME_WIDTH - titleImg.getWidth()) >> 1;
 		int y = Constant.FRAME_HEIGHT / 3;
-		g.drawImage(titleImg, x, y, null);
+		g.drawImage(titleImg, x+2, y-50, null);
 
 		// Make note's image blink
 		final int CYCLE = 30; // Blink Cycle

@@ -45,7 +45,7 @@ public class GameUtil {
     public static boolean isInProbability(int numerator, int denominator) throws Exception {
         // The numerator and denominator are not less than 0
         if (numerator <= 0 || denominator <= 0) {
-            throw new Exception("ä¼ å…¥äº†é�žæ³•çš„å�‚æ•°");
+            throw new Exception("The numerator and denominator are not less than 0");
         }
         // The numerator is greater than the denominator and must occur
         if (numerator >= denominator) {

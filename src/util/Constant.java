@@ -40,17 +40,17 @@ public class Constant {
 					"resources/img/dead.png", } };
 
 	// Cloud Pictures
-	public static final String[] CLOUDS_IMG_PATH = { "resources/img/cloud_0.png", "resources/img/cloud_1.png" };
+	public static final String[] CLOUDS_IMG_PATH = { "resources/img/meteorite.png", "resources/img/spaceship.png" };
 
 	// Water pipe pictures
 	public static final String[] PIPE_IMG_PATH = { "resources/img/pipe.png", "resources/img/pipe_top.png",
 			"resources/img/pipe_bottom.png" };
 
 	public static final String TITLE_IMG_PATH = "resources/img/title.png";
-	public static final String NOTICE_IMG_PATH = "resources/img/start.png";
+	public static final String NOTICE_IMG_PATH = "resources/img/startButton.png";
 	public static final String SCORE_IMG_PATH = "resources/img/scoreboard.png";
-	public static final String OVER_IMG_PATH = "resources/img/over.png";
-	public static final String AGAIN_IMG_PATH = "resources/img/again.png";
+	public static final String OVER_IMG_PATH = "resources/img/gameOver.png";
+	public static final String AGAIN_IMG_PATH = "resources/img/restartButton.png";
 
 	public static final String SCORE_FILE_PATH = "resources/score"; // Score file path
 
