@@ -1,6 +1,7 @@
 package app;
 
 import component.Bird;
+
 import component.GameBackground;
 import component.GameForeground;
 import component.WelcomeAnimation;
@@ -17,7 +18,6 @@ import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
-
 
 
 
@@ -39,7 +39,7 @@ public class Game extends Frame {
     public Game() {
         initFrame(); // initialize game frame
         setVisible(true); 
-        initGame(); // initialize game object
+        //initGame(); // initialize game object
     }
 
     // Method initialize frame
@@ -59,13 +59,13 @@ public class Game extends Frame {
     }
 
     // Allows the bird object to receive events
-    class BirdKeyListener implements KeyListener {
+    class BirdKeyListener implements KeyListener{
         // Press the button to call different methods based on the game status
         public void keyPressed(KeyEvent e) {
             int keycode = e.getKeyCode();
             switch (gameState) {
                 case GAME_READY:
-                    if (keycode == KeyEvent.VK_SPACE) {
+                    if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
                         // Press space and the bird will clap wings once and start effected the gravity
                         bird.birdFlap();
                         bird.birdFall();
@@ -73,7 +73,7 @@ public class Game extends Frame {
                     }
                     break;
                 case GAME_START:
-                    if (keycode == KeyEvent.VK_SPACE) {
+                    if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
         /* Pressing space during the game 
          * will make the wings vibrate once 
          * and continue to be affected by gravity */                     
@@ -83,7 +83,7 @@ public class Game extends Frame {
                     }
                     break;
                 case GAME_OVER:
-                    if (keycode == KeyEvent.VK_SPACE) {
+                    if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
   // Press space at the end of the game to restart the game
                           resetGame();
                     }
@@ -91,7 +91,8 @@ public class Game extends Frame {
             }
         }
 
-        // Restart game
+       	
+		// Restart game
         private void resetGame() {
             setGameState(GAME_READY);
             gameElement.reset();
@@ -100,8 +101,8 @@ public class Game extends Frame {
 
         // Key release, change key status flag
          public void keyReleased(KeyEvent e) {
-            int keycode = e.getKeyChar();
-            if (keycode == KeyEvent.VK_SPACE) {
+            int keycode = e.getKeyCode();
+            if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
                 bird.keyReleased();
             }
         }
