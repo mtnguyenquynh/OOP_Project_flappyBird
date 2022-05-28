@@ -69,7 +69,7 @@ public class Constant {
 	public static final int TOP_BAR_HEIGHT = 20;
 
 	// Ground height
-	public static final int GROUND_HEIGHT = 35;
+	public static final int GROUND_HEIGHT = 0;
 
 	// Upper pipe lengthening
 	public static final int TOP_PIPE_LENGTHENING = 100;
