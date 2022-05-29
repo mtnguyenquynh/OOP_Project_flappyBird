@@ -24,6 +24,7 @@ import java.awt.image.BufferedImage;
 
 
 
+
 public class Game extends Frame {
     private static final long serialVersionUID = 1L; 
     // Maintain game state compatible with version 
@@ -83,7 +84,6 @@ public class Game extends Frame {
          * and continue to be affected by gravity */                     
                         bird.birdFlap();
                         bird.birdFall();
-                        //audio.sound_fly();
                     }
                     break;
                 case GAME_OVER:

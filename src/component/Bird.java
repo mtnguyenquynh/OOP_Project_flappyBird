@@ -11,6 +11,8 @@ import java.awt.image.BufferedImage;
 import app.Game;
 import util.Constant;
 import util.GameUtil;
+import util.Sound;
+
 
 /**
  * Small bird class, implement 
@@ -108,6 +110,7 @@ public class Bird {
             freeFall();
             if (birdCollisionRect.y > BOTTOM_BOUNDARY) {
                 if (state == BIRD_FALL) {
+                    Sound.playCrash();
                 }
                 die();
             }
@@ -132,6 +135,7 @@ public class Bird {
         if (keyIsReleased()) {
             if (isDead())
                 return;
+            Sound.playFly();
             state = BIRD_UP;
             if (birdCollisionRect.y > Constant.TOP_BAR_HEIGHT) {
                 velocity = ACC_FLAP; // Changing the speed to upward speed with each wing vibration
@@ -151,6 +155,7 @@ public class Bird {
     // Little bird falling (dead)
     public void deadBirdFall() {
         state = BIRD_DEAD_FALL;
+        Sound.playCrash();
         velocity = 0;  // Speed is set to 0 to prevent the bird from continuing to rise and overlap with the water pipe
     }
 

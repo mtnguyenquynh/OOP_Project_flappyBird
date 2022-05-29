@@ -6,15 +6,12 @@
       <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/wav/score1.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Audio.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Bird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/ScoreCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/ScoreCounter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Sound.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -51,17 +48,12 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/WIN 10/IdeaProjects/OOP_Project_flappyBird/resources/wav",
+    "last_opened_file_path": "C:/Users/WIN 10/Downloads/tritonus-share-0.3.7-1.jar",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
   }
 }]]></component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\WIN 10\IdeaProjects\OOP_Project_flappyBird\resources\wav" />
-    </key>
-  </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="app.App" />

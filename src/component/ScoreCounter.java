@@ -10,6 +10,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 import util.Constant;
+import util.Sound;
 
 /**
  * Score counter
@@ -62,6 +63,7 @@ public class ScoreCounter {
 
 	public void score(Bird bird) {
 		if (!bird.isDead()) {
+			Sound.playScore();
 			score += 1;
 		}
 	}

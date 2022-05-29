@@ -1,15 +1,13 @@
 package util;
 
-
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.URL;
 
-import javax.sound.*;
-import java.applet.*;
-import java.net.*;
-import sun.audio.AudioPlayer;
-import sun.audio.AudioStream;
+import javax.sound.sampled.*;
+
 
 /**
  * 音乐工具类
@@ -17,40 +15,59 @@ import sun.audio.AudioStream;
  * @author BUILD SUCCESSFUL
  * wav音频：JDK提供的类可直接解码 mp3音频：JDK没有提供支持，需要使用第三方的工具包
  */
-public class Sound extends Applet {
+public class Sound {
+    private static AudioInputStream flySound;
+    private static AudioInputStream crashSound;
+    private static AudioInputStream scoreSound;
+    private static Clip clip;
 
-    private static AudioClip fly;
-    private static AudioStream crash;
-    private static AudioStream score;
+        // wav播放
+        public static void playFly() {
+            try {
+                flySound = AudioSystem.getAudioInputStream(new File("resources/wav/fly.wav"));
+                clip = AudioSystem.getClip();
 
-    // wav播放
-    public static void playFly() {
-        try {
-            // create an AudioStream from the InputStream
-            InputStream flyIn = new FileInputStream("resources/wav/fly.wav");
-            fly = new AudioStream(flyIn);
-        } catch (IOException ignored) {
+                clip.open(flySound);
+                clip.start();
+
+            } catch (IOException ignored) {
+            } catch (UnsupportedAudioFileException e) {
+                throw new RuntimeException(e);
+            } catch (LineUnavailableException e) {
+                throw new RuntimeException(e);
+            }
         }
-        AudioPlayer.player.start(fly);
-    }
 
     public static void playCrash() {
         try {
-            // create an AudioStream from the InputStream
-            InputStream crashIn = new FileInputStream("resources/wav/crash.wav");
-            crash = new AudioStream(crashIn);
-        } catch (IOException ignored) {
-        }
-        AudioPlayer.player.start(crash);
-    }
+            crashSound = AudioSystem.getAudioInputStream(new File("resources/wav/crash.wav"));
+            clip = AudioSystem.getClip();
 
+            clip.open(crashSound);
+            clip.start();
+
+        } catch (IOException ignored) {
+        } catch (UnsupportedAudioFileException e) {
+            throw new RuntimeException(e);
+        } catch (LineUnavailableException e) {
+            throw new RuntimeException(e);
+        }
+    }
     public static void playScore() {
         try {
-            // create an AudioStream from the InputStream
-            InputStream scoreIn = new FileInputStream("resources/wav/score.wav");
-            score = new AudioStream(scoreIn);
+            scoreSound = AudioSystem.getAudioInputStream(new File("resources/wav/score.wav"));
+            clip = AudioSystem.getClip();
+
+            clip.open(scoreSound);
+            clip.start();
+
         } catch (IOException ignored) {
+        } catch (UnsupportedAudioFileException e) {
+            throw new RuntimeException(e);
+        } catch (LineUnavailableException e) {
+            throw new RuntimeException(e);
         }
-        AudioPlayer.player.start(score);
     }
-}
+
+    }
+
