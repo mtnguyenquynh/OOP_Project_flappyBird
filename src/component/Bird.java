@@ -44,8 +44,8 @@ public class Bird {
     private final ScoreCounter counter; // Scorer
     private final GameOverAnimation gameOverAnimation;
 
-    public static int BIRD_WIDTH;
-    public static int BIRD_HEIGHT;
+    public static int BIRD_WIDTH; //39
+    public static int BIRD_HEIGHT; //33
 
     // Initialization of resources in the constructor
     public Bird() {
@@ -65,12 +65,12 @@ public class Bird {
         BIRD_HEIGHT = birdImages[0][0].getHeight();
 
         // Initialize the coordinates of the bird
-        x = Constant.FRAME_WIDTH >> 2;
-        y = Constant.FRAME_HEIGHT >> 1;
+        x = Constant.FRAME_WIDTH/4;  //Chim ở vị trí x = 100, y = 300
+        y = Constant.FRAME_HEIGHT/2;
 
         // Initialize collision rectangle
-        int rectX = x - BIRD_WIDTH / 2;
-        int rectY = y - BIRD_HEIGHT / 2;
+        int rectX = x - BIRD_WIDTH; //điểm đầu hình
+        int rectY = y - BIRD_HEIGHT; //điểm đầu hình
         birdCollisionRect = new Rectangle(rectX + RECT_DESCALE, rectY + RECT_DESCALE * 2, BIRD_WIDTH - RECT_DESCALE * 3,
                 BIRD_WIDTH - RECT_DESCALE * 4); // The coordinates of the collision rectangle are the same as those of the bird
     }
@@ -83,28 +83,8 @@ public class Bird {
         int halfImgWidth = birdImages[state_index][0].getWidth() >> 1;
         int halfImgHeight = birdImages[state_index][0].getHeight() >> 1;
         // Movement when bird goes up 
-        if (velocity > 0 && velocity < 1){
-            image = birdImages[BIRD_UP][0];}
-        if (velocity >= 1 && velocity < 2){
-            image = birdImages[BIRD_UP][1];}
-        if (velocity >= 2 && velocity < 4){
-            image = birdImages[BIRD_UP][2];}
-        if (velocity >= 4 && velocity < 5){
-            image = birdImages[BIRD_UP][3];}
-        if (velocity >= 6 && velocity < 8){
-            image = birdImages[BIRD_UP][4];}
-        if (velocity >= 8 && velocity < 9){
-            image = birdImages[BIRD_UP][5];}
-        if (velocity >= 9 && velocity < 10){
-            image = birdImages[BIRD_UP][6];}
-        if (velocity >= 10 && velocity < 11){
-            image = birdImages[BIRD_UP][7];}
-        if (velocity >= 11 && velocity < 12){
-            image = birdImages[BIRD_UP][8];}
-        if (velocity >= 12 && velocity <= 13){
-            image = birdImages[BIRD_UP][9];}
-        if (velocity > 13 && velocity <= 15){
-            image = birdImages[BIRD_UP][10];}
+        if (velocity > 0)
+            image = birdImages[BIRD_UP][0];
         
         g.drawImage(image, x - halfImgWidth, y - halfImgHeight, null); //Draw the bird at x coordinate is at 1/4 of the window and the y coordinate is at the center of the window 
         // if dead then change to OverAnimatipon
@@ -112,10 +92,7 @@ public class Bird {
             gameOverAnimation.draw(g, this);
         else if (state != BIRD_DEAD_FALL) // if not score plus 1
             drawScore(g);
-        // Drawing collision rectangles
-//      g.setColor(Color.black);
-//      g.drawRect((int) birdRect.getX(), (int) birdRect.getY(), (int) birdRect.getWidth(), (int) birdRect.getHeight());
-    }
+     }
 
     public static final int ACC_FLAP = 14; // players speed on flapping
     public static final double ACC_Y = 2; // players downward acceleration

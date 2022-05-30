@@ -32,9 +32,8 @@ public class Constant {
 	public static final String[][] BIRDS_IMG_PATH = {
 			{ "resources/img/0.png", "resources/img/1.png", "resources/img/2.png", "resources/img/3.png",
 					"resources/img/4.png", "resources/img/5.png", "resources/img/6.png", "resources/img/7.png" },
-			{ "resources/img/up1.png", "resources/img/up2.png", "resources/img/up3.png", "resources/img/up4.png",
-					"resources/img/up5.png", "resources/img/up6.png", "resources/img/up7png", 
-			 		"resources/img/up8.png", "resources/img/up9.png", "resources/img/up10png" },
+			{ "resources/img/up.png", "resources/img/up.png", "resources/img/up.png", "resources/img/up.png",
+					"resources/img/up.png", "resources/img/up.png", "resources/img/up.png", "resources/img/up.png" },
 			{ "resources/img/down_0.png", "resources/img/down_1.png", "resources/img/down_2.png",
 					"resources/img/down_3.png", "resources/img/down_4.png", "resources/img/down_5.png",
 					"resources/img/down_6.png", "resources/img/down_7.png" },

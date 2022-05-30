@@ -2,20 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afde5f60-6009-4fb9-a09f-2748f6e81923" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/OOP_Project_flappyBird.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/wav/score1.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Audio.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Bird.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Bird.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameElementLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameElementLayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/ScoreCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/ScoreCounter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/score" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/score" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/util/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/util/Constant.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/wav/score1.wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/up1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/up10.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/up2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/up3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/up4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/up5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/up6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/up7.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/up8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/img/up9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/score" beforeDir="false" afterPath="$PROJECT_DIR$/resources/score" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Bird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/ScoreCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/ScoreCounter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/GameElementLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameElementLayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Constant.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,17 +54,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/WIN 10/IdeaProjects/OOP_Project_flappyBird/resources/wav",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/WIN 10/IdeaProjects/OOP_Project_flappyBird/resources/wav&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\WIN 10\IdeaProjects\OOP_Project_flappyBird\resources\wav" />

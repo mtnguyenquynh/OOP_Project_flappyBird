@@ -52,10 +52,11 @@ public class GameElementLayer {
      * the distance between each pair of water pipes is 1/4 of the screen height; 
      * the range of values for the height of the water pipes is [1/8~5/8] of the window
      */
-    public static final int VERTICAL_INTERVAL = Constant.FRAME_HEIGHT / 5;
-    public static final int HORIZONTAL_INTERVAL = Constant.FRAME_HEIGHT >> 2;
-    public static final int MIN_HEIGHT = Constant.FRAME_HEIGHT >> 3;
-    public static final int MAX_HEIGHT = ((Constant.FRAME_HEIGHT) >> 3) * 5;
+
+    public static final int VERTICAL_INTERVAL = Constant.FRAME_HEIGHT / 5; //khoảng cách giữa cột trên và dưới
+    public static final int HORIZONTAL_INTERVAL = Constant.FRAME_HEIGHT/ 4;// khoảng cách bề ngang giữa 2 cặp cột
+    public static final int MIN_HEIGHT = Constant.FRAME_HEIGHT/3; // Chiều cao nhỏ nhất của cột
+    public static final int MAX_HEIGHT = ((Constant.FRAME_HEIGHT)/8) * 5; // Chiều cao lớn nhất của cột
 
     private void pipeBornLogic(Bird bird) {
         if (bird.isDead()) {
@@ -79,7 +80,7 @@ public class GameElementLayer {
         } else {
             // Determine if the last pair of pipes is completely in the game window, if it is, add the pipes
             Pipe lastPipe = pipes.get(pipes.size() - 1); // Get the last water pipe in the container
-            int currentDistance = lastPipe.getX() - bird.getBirdX() + Bird.BIRD_WIDTH / 2; // The distance between the bird and the last pipe
+            int currentDistance = lastPipe.getX() - bird.getBirdX(); // The distance between the bird and the last pipe
             final int SCORE_DISTANCE = Pipe.PIPE_WIDTH * 2 + HORIZONTAL_INTERVAL; // Score if less than the scoring distance
             if (lastPipe.isInFrame()) {
                 if (pipes.size() >= PipePool.FULL_PIPE - 2
