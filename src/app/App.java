@@ -2,7 +2,7 @@
 package app;
 
 /**
- * Game main frame
+ * Game main class
  * 
  * @author BUILD SUCCESSFULL
  *

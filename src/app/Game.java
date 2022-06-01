@@ -22,48 +22,48 @@ import java.awt.Toolkit;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
 
-
-
+/**
+ * Class contains frame and objects in game
+ *
+ * @author BUILD SUCCESSFULL
+ *
+ */
 
 public class Game extends Frame {
-    private static final long serialVersionUID = 1L; 
-    // Maintain game state compatible with version 
+    private static final long serialVersionUID = 1L;
     private static int gameState; 
-    public static final int GAME_READY = 0; // Game ready
-    public static final int GAME_START = 1; // Game start
-    public static final int GAME_OVER = 2; // Game over
+    public static final int GAME_READY = 0;
+    public static final int GAME_START = 1;
+    public static final int GAME_OVER = 2;
 
-    private GameBackground background; // Background
-    private GameForeground foreground; // Foreground
-    private Bird bird; // Bird object
-    private GameElementLayer gameElement; // Game element object
-    private WelcomeAnimation welcomeAnimation; // Welcome object
+    private GameBackground background;
+    private GameForeground foreground;
+    private Bird bird;
+    private GameElementLayer gameElement;
+    private WelcomeAnimation welcomeAnimation;
 
-    // Constructor to initialize game
     public Game() {
-        initFrame(); // initialize game frame
+        initFrame();
         setVisible(true); 
-        initGame(); // initialize game object
+        initGame();
     }
 
-    // Method initialize frame
     private void initFrame() {
-        setSize(FRAME_WIDTH, FRAME_HEIGHT); // Set size for frame
-        setTitle(GAME_TITLE); // Frame title
-        setLocation(FRAME_X, FRAME_Y); // Frame location
+        setSize(FRAME_WIDTH, FRAME_HEIGHT);
+        setTitle(GAME_TITLE);
+        setLocation(FRAME_X, FRAME_Y);
         setResizable(false); 
         setIconImage(Toolkit.getDefaultToolkit().getImage(Constant.ICON_IMG_PATH));
         
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
-                System.exit(0); // Exit window
+                System.exit(0);
             }
         });
-        addKeyListener(new BirdKeyListener()); // Add main game window 
+        addKeyListener(new BirdKeyListener());
     }
 
-    // Allows the bird object to receive events
     class BirdKeyListener implements KeyListener{
         // Press the button to call different methods based on the game status
         public void keyPressed(KeyEvent e) {
@@ -71,15 +71,14 @@ public class Game extends Frame {
             switch (gameState) {
                 case GAME_READY:
                     if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
-                        // Press space and the bird will clap wings once and start effected the gravity
                         bird.birdFlap();
                         bird.birdFall();
-                        setGameState(GAME_START); // Game state change 
+                        setGameState(GAME_START);
                     }
                     break;
                 case GAME_START:
                     if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
-        /* Pressing space during the game 
+        /* Pressing space or up button during the game
          * will make the wings vibrate once 
          * and continue to be affected by gravity */                     
                         bird.birdFlap();
@@ -88,13 +87,11 @@ public class Game extends Frame {
                     break;
                 case GAME_OVER:
                     if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
-  // Press space at the end of the game to restart the game
                           resetGame();
                     }
                     break;
             }
         }
-
        	
 		// Restart game
         private void resetGame() {

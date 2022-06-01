@@ -9,21 +9,24 @@ import util.Constant;
 
 /**
  * Water pipe object pool
- * To avoid repeatedly creating and destroying objects, use object pools to create some objects in advance, get them from the object pool when they are used, and return them when they are finished
+ * To avoid repeatedly creating and destroying objects,
+ * use object pools to create some objects in advance,
+ * get them from the object pool when they are used,
+ * and return them when they are finished
  * 
  * @author BUILD SUCCESSFUL
  *
  */
 public class PipePool {
-	private static final List<Pipe> pool = new ArrayList<>(); // Containers for objects in the pool
-	private static final List<MovingPipe> movingPool = new ArrayList<>(); // Containers for objects in the pool
-	public static final int MAX_PIPE_COUNT = 30; // Maximum number of objects in the object pool, self-defined
+	private static final List<Pipe> normalPool = new ArrayList<>();
+	private static final List<MovingPipe> movingPool = new ArrayList<>();
+	public static final int MAX_PIPE_NUMBER = 30;
 	public static final int FULL_PIPE = (Constant.FRAME_WIDTH
 			/ (Pipe.PIPE_HEAD_WIDTH + GameElementLayer.HORIZONTAL_INTERVAL) + 2) * 2;
 
 	static {
 		for (int i = 0; i < PipePool.FULL_PIPE; i++) {
-			pool.add(new Pipe());
+			normalPool.add(new Pipe());
 		}
 		for (int i = 0; i < PipePool.FULL_PIPE; i++) {
 			movingPool.add(new MovingPipe());
@@ -37,9 +40,9 @@ public class PipePool {
 	 */
 	public static Pipe get(String className) {
 		if ("Pipe".equals(className)) {
-			int size = pool.size();
+			int size = normalPool.size();
 			if (size > 0) {
-				return pool.remove(size - 1); // Remove and return the last
+				return normalPool.remove(size - 1); // Remove and return the last
 			} else {
 				return new Pipe(); // Empty object pool, return a new object
 			}
@@ -59,11 +62,11 @@ public class PipePool {
 	public static void giveBack(Pipe pipe) {
 		// Determining the type of class
 		if(pipe.getClass() == Pipe.class) {
-			if (pool.size() < MAX_PIPE_COUNT) {
-				pool.add(pipe);
+			if (normalPool.size() < MAX_PIPE_NUMBER) {
+				normalPool.add(pipe);
 			}
 		}else {
-			if (movingPool.size() < MAX_PIPE_COUNT) {
+			if (movingPool.size() < MAX_PIPE_NUMBER) {
 				movingPool.add((MovingPipe)pipe);
 			}
 		}

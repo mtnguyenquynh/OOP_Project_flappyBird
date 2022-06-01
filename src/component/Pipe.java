@@ -15,65 +15,55 @@ import util.GameUtil;
  * @author BUILD SUCCESSFUL
  */
 public class Pipe {
-    static BufferedImage[] imgs; // Pictures of water pipes, static ensures that the picture is loaded only once
+    static BufferedImage[] pipeImage;
 
-    static {// Static code block, when the class is loaded, initialize the image
+    static {
         final int PIPE_IMAGE_COUNT = 3;
-        imgs = new BufferedImage[PIPE_IMAGE_COUNT];
+        pipeImage = new BufferedImage[PIPE_IMAGE_COUNT];
         for (int i = 0; i < PIPE_IMAGE_COUNT; i++) {
-            imgs[i] = GameUtil.loadBufferedImage(Constant.PIPE_IMG_PATH[i]);
+            pipeImage[i] = GameUtil.loadBufferedImage(Constant.PIPE_IMG_PATH[i]);
         }
     }
 
     // Width and height of all water pipes
-    public static final int PIPE_WIDTH = imgs[0].getWidth();
-    public static final int PIPE_HEIGHT = imgs[0].getHeight();
-    public static final int PIPE_HEAD_WIDTH = imgs[1].getWidth();
-    public static final int PIPE_HEAD_HEIGHT = imgs[1].getHeight();
+    public static final int PIPE_WIDTH = pipeImage[0].getWidth();
+    public static final int PIPE_HEIGHT = pipeImage[0].getHeight();
+    public static final int PIPE_HEAD_WIDTH = pipeImage[1].getWidth();
+    public static final int PIPE_HEAD_HEIGHT = pipeImage[1].getHeight();
 
-    int x, y; // Coordinates of the water pipe, relative to the element layer
-    int width, height; // Width of water pipe, height
+    int pipeX, pipeY;
+    int width, height;
 
     boolean visible; // Water pipe visible status, true is visible, false means can be returned to the object pool
     // Type of water pipe
     int type;
     public static final int TYPE_TOP_NORMAL = 0;
-    public static final int TYPE_TOP_HARD = 1;
+    public static final int TYPE_TOP_MOVE = 1;
     public static final int TYPE_BOTTOM_NORMAL = 2;
-    public static final int TYPE_BOTTOM_HARD = 3;
+    public static final int TYPE_BOTTOM_MOVE = 3;
     public static final int TYPE_HOVER_NORMAL = 4;
-    public static final int TYPE_HOVER_HARD = 5;
+    public static final int TYPE_HOVER_MOVE = 5;
 
-    // Speed of water pipes
-    int speed;
+    int pipeSpeed;
 
     Rectangle pipeRect; // Collision rectangle of water pipe
 
     // Constructors
     public Pipe() {
-        this.speed = Constant.GAME_SPEED;
+        this.pipeSpeed = Constant.GAME_SPEED;
         this.width = PIPE_WIDTH;
 
         pipeRect = new Rectangle();
         pipeRect.width = PIPE_WIDTH;
     }
 
-    /**
-     * Set water pipe parameters
-     *
-     * @param x: x coordinate
-     * @param y：y coordinate
-     * @param height：Water pipe height
-     * @param type：Water pipe type
-     * @param visible：Water pipe visibility
-     */
     public void setAttribute(int x, int y, int height, int type, boolean visible) {
-        this.x = x;
-        this.y = y;
+        this.pipeX = x;
+        this.pipeY = y;
         this.height = height;
         this.type = type;
         this.visible = visible;
-        setRectangle(this.x, this.y, this.height);
+        setRectangle(this.pipeX, this.pipeY, this.height);
     }
 
     /**
@@ -85,12 +75,10 @@ public class Pipe {
         pipeRect.height = height;
     }
 
-    // Determine if a water pipe is located in a window
     public boolean isVisible() {
         return visible;
     }
 
-    //  Drawing method
     public void draw(Graphics g, Bird bird) {
         switch (type) {
             case TYPE_TOP_NORMAL:
@@ -103,86 +91,74 @@ public class Pipe {
                 drawHoverNormal(g);
                 break;
         }
-//      Drawing collision rectangles
-//      g.setColor(Color.black);
-//      g.drawRect((int) pipeRect.getX(), (int) pipeRect.getY(), (int) pipeRect.getWidth(), (int) pipeRect.getHeight());
-
-        // The water pipe stops moving after the bird dies
         if (bird.isDead()) {
             return;
         }
         movement();
     }
 
-    // Draw the common water pipe from top to bottom
+    // Draw the normal water pipe from top to bottom
     private void drawTopNormal(Graphics g) {
+
         // Number of splices
-        int count = (height - PIPE_HEAD_HEIGHT) / PIPE_HEIGHT + 1; // Rounding + 1
+        int count = (height - PIPE_HEAD_HEIGHT) / PIPE_HEIGHT+1; // Cho nó bao phủ được cột trên
         // Drawing the body of the water pipe
         for (int i = 0; i < count; i++) {
-            g.drawImage(imgs[0], x, y + i * PIPE_HEIGHT, null);
+            g.drawImage(pipeImage[0], pipeX, pipeY + i * PIPE_HEIGHT, null);
         }
         // Drawing the top of the water pipe
-        g.drawImage(imgs[1], x - ((PIPE_HEAD_WIDTH - width) >> 1),
-                height - Constant.TOP_PIPE_LENGTHENING - PIPE_HEAD_HEIGHT, null); // The width of the head of the water pipe is different from the body of the water pipe, and the x coordinate needs to be handled
+        // The width of the head of the water pipe is different from the body of the water pipe, and the pipeX coordinate needs to be handled
+       g.drawImage(pipeImage[1], pipeX - ((PIPE_HEAD_WIDTH - width) /2),
+                height - Constant.TOP_PIPE_LENGTHENING - PIPE_HEAD_HEIGHT, null);
     }
 
-    // Draw the common water pipe from the bottom to the top
+    // Draw the normal water pipe from the bottom to the top
     private void drawBottomNormal(Graphics g) {
         // Number of splices
-        int count = (height - PIPE_HEAD_HEIGHT - Constant.GROUND_HEIGHT) / PIPE_HEIGHT + 1;
+        int count = (height - PIPE_HEAD_HEIGHT) / PIPE_HEIGHT + 1;
         // Drawing the body of the water pipe
         for (int i = 0; i < count; i++) {
-            g.drawImage(imgs[0], x, Constant.FRAME_HEIGHT - PIPE_HEIGHT - Constant.GROUND_HEIGHT - i * PIPE_HEIGHT,
+            g.drawImage(pipeImage[0], pipeX, Constant.FRAME_HEIGHT - PIPE_HEIGHT - i * PIPE_HEIGHT,
                     null);
         }
         // Drawing the top of the water pipe
-        g.drawImage(imgs[2], x - ((PIPE_HEAD_WIDTH - width) >> 1), Constant.FRAME_HEIGHT - height, null);
+        g.drawImage(pipeImage[2], pipeX - ((PIPE_HEAD_WIDTH - width) >> 1), Constant.FRAME_HEIGHT - height, null);
     }
 
-    // Drawing the suspended common water pipe
+    // Drawing the hover normal water pipe
     private void drawHoverNormal(Graphics g) {
         // Number of splices
         int count = (height - 2 * PIPE_HEAD_HEIGHT) / PIPE_HEIGHT + 1;
         // Draw the upper top of the water pipe
-        g.drawImage(imgs[2], x - ((PIPE_HEAD_WIDTH - width) >> 1), y, null);
+        g.drawImage(pipeImage[2], pipeX - ((PIPE_HEAD_WIDTH - width) /2), pipeY, null);
         // Drawing the body of the water pipe
         for (int i = 0; i < count; i++) {
-            g.drawImage(imgs[0], x, y + i * PIPE_HEIGHT + PIPE_HEAD_HEIGHT, null);
-        }
-        // Draw the lower bottom of the water pipe
-        int y = this.y + height - PIPE_HEAD_HEIGHT;
-        g.drawImage(imgs[1], x - ((PIPE_HEAD_WIDTH - width) >> 1), y, null);
-    }
+            g.drawImage(pipeImage[0], pipeX, pipeY + i * PIPE_HEIGHT + PIPE_HEAD_HEIGHT, null);
+        //Draw the lower bottom of the water pipe
+        int y = this.pipeY + height - PIPE_HEAD_HEIGHT;
+        g.drawImage(pipeImage[1], pipeX - ((PIPE_HEAD_WIDTH - width) /2), y, null);
+    }}
 
     /**
      * Movement logic of ordinary water pipes
      */
     private void movement() {
-        x -= speed;
-        pipeRect.x -= speed;
-        if (x < -1 * PIPE_HEAD_WIDTH) {// The water pipe is completely out of the window
+        pipeX -= pipeSpeed;
+        pipeRect.x -= pipeSpeed;
+        if(pipeX <-1*PIPE_HEAD_WIDTH){
             visible = false;
         }
     }
 
-    /**
-     * Determine if the current water pipe is fully present in the window
-     *
-     * @return Returns true if fully present, false otherwise
-     */
     public boolean isInFrame() {
-        return x + width < Constant.FRAME_WIDTH;
+        return pipeX + width < Constant.FRAME_WIDTH;
     }
 
-    // Get the x coordinate of the water pipe
-    public int getX() {
-        return x;
+    public int getPipeX() {
+        return pipeX;
     }
 
-    // Get the collision rectangle of the water pipe
     public Rectangle getPipeRect() {
         return pipeRect;
     }
-
 }

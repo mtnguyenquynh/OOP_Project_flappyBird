@@ -1,24 +1,15 @@
 package component;
 
-
-
 import java.awt.*;
-
-
 import java.awt.image.BufferedImage;
 
 import util.Constant;
 import util.GameUtil;
 
-
-
-
-
-
 /**
  * Game launch screen
  * 
- * @author BUILD SUCESSFUL
+ * @author BUILD SUCCESSFUL
  *
  */
 public class WelcomeAnimation {
@@ -38,7 +29,7 @@ public class WelcomeAnimation {
 		int y = Constant.FRAME_HEIGHT / 3;
 		g.drawImage(titleImg, x+2, y-50, null);
 
-		// Make note's image blink
+		// Image blink
 		final int CYCLE = 30; // Blink Cycle
 		if (flashCount++ > CYCLE)
 			GameUtil.drawImage(noticeImg, Constant.FRAME_WIDTH - noticeImg.getWidth() >> 1, Constant.FRAME_HEIGHT / 5 * 3, g);

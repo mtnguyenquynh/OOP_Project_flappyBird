@@ -21,41 +21,41 @@ import util.Sound;
  * @author BUILD SUCCESSFUL
  */
 public class Bird {
-    public static final int IMG_COUNT = 8; // Number of images
-    public static final int STATE_COUNT = 4; // Status number
-    private final BufferedImage[][] birdImages; // Image array object of birds
-    private final int x;
-    private int y; // Coordinates of the bird
-    private int wingState; // Wing status
+    public static final int IMG_TOTAL_NUMBER = 8;
+    public static final int STATE_NUMBER = 4;
+    private final BufferedImage[][] birdImages;
+    private final int birdX;
+    private int birdY;
+    private int wingState;
 
     // Image resources
-    private BufferedImage image; // Real time bird images
+    private BufferedImage image;
 
     // Status of the bird
-    private int state;
+    private int birdState;
     public static final int BIRD_NORMAL = 0;
     public static final int BIRD_UP = 1;
     public static final int BIRD_FALL = 2;
     public static final int BIRD_DEAD_FALL = 3;
     public static final int BIRD_DEAD = 4;
 
-    private final Rectangle birdCollisionRect; // Collision rectangle
-    public static final int RECT_DESCALE = 2; // Parameters to compensate for the width and height of the collision rectangle
-    private final ScoreCounter counter; // Scorer
+    private final Rectangle birdCollisionRect;
+    public static final int RECT_DESCALE = 2;
+    private final ScoreCounter scoreCounter;
     private final GameOverAnimation gameOverAnimation;
 
-    public static int BIRD_WIDTH; //39
-    public static int BIRD_HEIGHT; //33
+    public static int BIRD_WIDTH;
+    public static int BIRD_HEIGHT;
 
     // Initialization of resources in the constructor
     public Bird() {
-        counter = ScoreCounter.getInstance(); // Scorer
+        scoreCounter = ScoreCounter.getInstance();
         gameOverAnimation = new GameOverAnimation();
 
         // Read birdie image resources
-        birdImages = new BufferedImage[STATE_COUNT][IMG_COUNT];
-        for (int i = 0; i < STATE_COUNT; i++) {
-            for (int j = 0; j < IMG_COUNT; j++) {
+        birdImages = new BufferedImage[STATE_NUMBER][IMG_TOTAL_NUMBER];
+        for (int i = 0; i < STATE_NUMBER; i++) {
+            for (int j = 0; j < IMG_TOTAL_NUMBER; j++) {
                 birdImages[i][j] = GameUtil.loadBufferedImage(Constant.BIRDS_IMG_PATH[i][j]);
             }
         }
@@ -65,50 +65,52 @@ public class Bird {
         BIRD_HEIGHT = birdImages[0][0].getHeight();
 
         // Initialize the coordinates of the bird
-        x = Constant.FRAME_WIDTH/4;  //Chim ở vị trí x = 100, y = 300
-        y = Constant.FRAME_HEIGHT/2;
+        birdX = Constant.FRAME_WIDTH/4;
+        birdY = Constant.FRAME_HEIGHT/2;
 
         // Initialize collision rectangle
-        int rectX = x - BIRD_WIDTH; //điểm đầu hình
-        int rectY = y - BIRD_HEIGHT; //điểm đầu hình
+        int rectX = birdX - BIRD_WIDTH/2;
+        int rectY = birdY - BIRD_HEIGHT/2;
         birdCollisionRect = new Rectangle(rectX + RECT_DESCALE, rectY + RECT_DESCALE * 2, BIRD_WIDTH - RECT_DESCALE * 3,
-                BIRD_WIDTH - RECT_DESCALE * 4); // The coordinates of the collision rectangle are the same as those of the bird
+                BIRD_WIDTH - RECT_DESCALE * 4);
     }
 
     // Drawing method
     public void draw(Graphics g) {
         movement();
-        int state_index = Math.min(state, BIRD_DEAD_FALL); // Image Resource Index
+        int state_index = Math.min(birdState, BIRD_DEAD_FALL);
+
         // Birdie center point calculation
-        int halfImgWidth = birdImages[state_index][0].getWidth() >> 1;
-        int halfImgHeight = birdImages[state_index][0].getHeight() >> 1;
-        // Movement when bird goes up 
-        if (velocity > 0)
+        int halfImgWidth = birdImages[state_index][0].getWidth()/2;
+        int halfImgHeight = birdImages[state_index][0].getHeight()/2;
+
+        // Movement when bird goes up
+        if (birdVelocity > 0)
             image = birdImages[BIRD_UP][0];
         
-        g.drawImage(image, x - halfImgWidth, y - halfImgHeight, null); //Draw the bird at x coordinate is at 1/4 of the window and the y coordinate is at the center of the window 
-        // if dead then change to OverAnimatipon
-        if (state == BIRD_DEAD)
+        g.drawImage(image, birdX - halfImgWidth, birdY - halfImgHeight, null); //Draw the bird at pipeX coordinate is at 1/4 of the window and the y coordinate is at the center of the window
+
+        if (birdState == BIRD_DEAD)
             gameOverAnimation.draw(g, this);
-        else if (state != BIRD_DEAD_FALL) // if not score plus 1
+        else if (birdState != BIRD_DEAD_FALL)
             drawScore(g);
      }
 
     public static final int ACC_FLAP = 14; // players speed on flapping
     public static final double ACC_Y = 2; // players downward acceleration
-    public static final int MAX_VEL_Y = 15; // max velocity along Y, max descend speed
-    private int velocity = 0; // bird's velocity along Y, default same as playerFlapped
-    private final int BOTTOM_BOUNDARY = Constant.FRAME_HEIGHT;//Constant.FRAME_HEIGHT - GameBackground.GROUND_HEIGHT - (BIRD_HEIGHT / 2);
+    public static final int MAX_VEL_Y = 15; // max birdVelocity along Y, max descend speed
+    private int birdVelocity = 0; // bird's birdVelocity along Y, default same as playerFlapped
+    private final int BOTTOM_BOUNDARY = Constant.FRAME_HEIGHT;
 
-    // The flight logic of a small bird
+    // The method showing how the bird move
     private void movement() {
-        // Wings state, to achieve a small bird wing flight
+        // Wings birdState, to achieve a small bird wing flight
         wingState++;
-        image = birdImages[Math.min(state, BIRD_DEAD_FALL)][wingState / 10 % IMG_COUNT];
-        if (state == BIRD_FALL || state == BIRD_DEAD_FALL) {
+        image = birdImages[Math.min(birdState, BIRD_DEAD_FALL)][wingState / 10 % IMG_TOTAL_NUMBER];
+        if (birdState == BIRD_FALL || birdState == BIRD_DEAD_FALL) {
             freeFall();
             if (birdCollisionRect.y > BOTTOM_BOUNDARY) {
-                if (state == BIRD_FALL) {
+                if (birdState == BIRD_FALL) {
                     Sound.playCrash();
                 }
                 die();
@@ -117,75 +119,72 @@ public class Bird {
     }
 
     private void freeFall() {
-        if (velocity < MAX_VEL_Y)
-            velocity -= ACC_Y;
-        y = Math.min((y - velocity), BOTTOM_BOUNDARY);
-        birdCollisionRect.y = birdCollisionRect.y - velocity;
+        if (birdVelocity < MAX_VEL_Y)
+            birdVelocity -= ACC_Y;
+        birdY = Math.min((birdY - birdVelocity), BOTTOM_BOUNDARY);
+        birdCollisionRect.y = birdCollisionRect.y - birdVelocity;
     }
 
     private void die() {
-        counter.saveScore();
-        state = BIRD_DEAD;
+        scoreCounter.saveScore();
+        birdState = BIRD_DEAD;
         Game.setGameState(Game.GAME_OVER);
     }
 
-    // Birdie on the wing
+    // User press button to control the bird flapping
     public void birdFlap() {
         if (keyIsReleased()) {
             if (isDead())
                 return;
             Sound.playFly();
-            state = BIRD_UP;
+            birdState = BIRD_UP;
             if (birdCollisionRect.y > Constant.TOP_BAR_HEIGHT) {
-                velocity = ACC_FLAP; // Changing the speed to upward speed with each wing vibration
+                birdVelocity = ACC_FLAP; // Changing the speed to upward speed with each wing vibration
                 wingState = 0; // Reset Wing Status
             }
             keyPressed();
         }
     }
 
-    // Birdie drop
+    // Birdie fall
     public void birdFall() {
         if (isDead())
             return;
-        state = BIRD_FALL;
+        birdState = BIRD_FALL;
     }
 
-    // Little bird falling (dead)
+    // Bird hit the pipe and fall
     public void deadBirdFall() {
-        state = BIRD_DEAD_FALL;
+        birdState = BIRD_DEAD_FALL;
         Sound.playCrash();
-        velocity = 0;  // Speed is set to 0 to prevent the bird from continuing to rise and overlap with the water pipe
+        birdVelocity = 0;  // Speed is set to 0 to prevent the bird from continuing to rise and overlap with the water pipe
     }
 
     // Determining if a bird is dead
     public boolean isDead() {
-        return state == BIRD_DEAD_FALL || state == BIRD_DEAD;
+        return birdState == BIRD_DEAD_FALL || birdState == BIRD_DEAD;
     }
 
-    // Plotting real-time scores
     private void drawScore(Graphics g) {
         g.setColor(Color.white);
         g.setFont(Constant.CURRENT_SCORE_FONT);
-        String str = Long.toString(counter.getCurrentScore());
-        int x = Constant.FRAME_WIDTH - GameUtil.getStringWidth(Constant.CURRENT_SCORE_FONT, str) >> 1;
+        String str = Long.toString(scoreCounter.getCurrentScore());
+        int x = Constant.FRAME_WIDTH/2-15;
         g.drawString(str, x, Constant.FRAME_HEIGHT / 10);
     }
 
-    // Reset Birdie
+    // Reset Bird
     public void reset() {
-        state = BIRD_NORMAL; // Bird status
-        y = Constant.FRAME_HEIGHT >> 1; // Bird coordinates
-        velocity = 0; // Birdie Speed
+        birdState = BIRD_NORMAL;
+        birdY = Constant.FRAME_HEIGHT/2;
+        birdVelocity = 0;
 
-        int ImgHeight = birdImages[state][0].getHeight();
-        birdCollisionRect.y = y - ImgHeight / 2 + RECT_DESCALE * 2; // Bird collision rectangle coordinates
-
-        counter.reset(); // Resetting the scorer
+        int ImgHeight = birdImages[birdState][0].getHeight();
+        birdCollisionRect.y = birdY - ImgHeight / 2 + RECT_DESCALE * 2;
+        scoreCounter.reset(); // Resetting the scorer
     }
 
-    private boolean keyFlag = true; // Keystroke status, true is released so that the method is not repeatedly called when the key is held down
-
+    private boolean keyFlag = true;
     public void keyPressed() {
         keyFlag = false;
     }
@@ -199,15 +198,15 @@ public class Bird {
     }
 
     public long getCurrentScore() {
-        return counter.getCurrentScore();
+        return scoreCounter.getCurrentScore();
     }
 
     public long getBestScore() {
-        return counter.getBestScore();
+        return scoreCounter.getBestScore();
     }
 
     public int getBirdX() {
-        return x;
+        return birdX;
     }
 
     // Get the collision rectangle of the bird

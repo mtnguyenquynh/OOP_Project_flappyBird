@@ -16,9 +16,9 @@ import util.GameUtil;
  */
 public class GameBackground {
 
-	private static final BufferedImage BackgroundImg;// Background Image
+	private static final BufferedImage BackgroundImg;
 
-	private final int speed; // Speed of the background layer
+	private final int backGroundSpeed;
 	private int layerX; // Coordinates of the background layer
 
 	public static final int GROUND_HEIGHT;
@@ -29,27 +29,22 @@ public class GameBackground {
 		GROUND_HEIGHT = BackgroundImg.getHeight() / 2;
 	}
 
-	// Constructor
 	public GameBackground() {
-		this.speed = Constant.GAME_SPEED;
+		this.backGroundSpeed = Constant.GAME_SPEED;
 		this.layerX = 0;
 	}
 
-	// Drawing method
 	public void draw(Graphics g, Bird bird) {
-		// Drawing background color
-		//g.setColor(Constant.BG_COLOR);
+
 		g.fillRect(0, 0, Constant.FRAME_WIDTH, Constant.FRAME_HEIGHT);
 
-		// Get the size of the background image
-		int imgWidth = BackgroundImg.getWidth();
+		int backgroundimgWidth = BackgroundImg.getWidth();
 		int imgHeight = BackgroundImg.getHeight();
 
-		int count = Constant.FRAME_WIDTH / imgWidth + 2; //  Get the number of times the image is drawn based on the window width
+		int count = Constant.FRAME_WIDTH / backgroundimgWidth + 2; //  Get the number of times the image is drawn based on the window width
 		for (int i = 0; i < count; i++) {
-			g.drawImage(BackgroundImg, imgWidth * i - layerX, Constant.FRAME_HEIGHT - imgHeight, null);
+			g.drawImage(BackgroundImg, backgroundimgWidth * i - layerX, Constant.FRAME_HEIGHT - imgHeight, null);
 		}
-		// Birds are no longer drawn if they die
 		if(bird.isDead()) {  
 			return;
 		}
@@ -58,7 +53,7 @@ public class GameBackground {
 
 	// Motion logic of the background layer
 	private void movement() {
-		layerX += speed;
+		layerX += backGroundSpeed;
 		if (layerX > BackgroundImg.getWidth())
 			layerX = 0;
 	}

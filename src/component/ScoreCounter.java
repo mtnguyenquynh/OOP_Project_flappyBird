@@ -15,7 +15,7 @@ import util.Sound;
 /**
  * Score counter
  * 
- * @author BUILD SUCESSFUL
+ * @author BUILD SUCCESSFUL
  *
  */
 public class ScoreCounter {
@@ -43,9 +43,9 @@ public class ScoreCounter {
 	private void loadBestScore() throws Exception {
 		File file = new File(Constant.SCORE_FILE_PATH);
 		if (file.exists()) {
-			DataInputStream dis = new DataInputStream(new FileInputStream(file));
-			bestScore = dis.readLong();
-			dis.close();
+			DataInputStream dataInputStream = new DataInputStream(new FileInputStream(file));
+			bestScore = dataInputStream.readLong();
+			dataInputStream.close();
 		}
 	}
 
@@ -53,9 +53,9 @@ public class ScoreCounter {
 		bestScore = Math.max(bestScore, getCurrentScore());
 		try {
 			File file = new File(Constant.SCORE_FILE_PATH);
-			DataOutputStream dos = new DataOutputStream(new FileOutputStream(file));
-			dos.writeLong(bestScore);
-			dos.close();
+			DataOutputStream dataOutputStream= new DataOutputStream(new FileOutputStream(file));
+			dataOutputStream.writeLong(bestScore);
+			dataOutputStream.close();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

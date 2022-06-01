@@ -9,40 +9,40 @@ import java.awt.image.BufferedImage;
 /**
  * Cloud class, to achieve the logic of cloud drawing and movement
  *
- * @author Kingyu
+ * @author BUILD SUCCESSFUL
  */
 public class Cloud {
 
-    private final int speed; // Speed
-    private int x; // Coordinates
-    private final int y;
+    private final int cloudSpeed;
+    private int cloudX;
+    private final int cloudY;
 
-    private final BufferedImage img;
+    private final BufferedImage cloudImg;
 
-    private final int scaleImageWidth;
-    private final int scaleImageHeight;
+    private final int cloudImageWidth;
+    private final int cloudImageHeight;
 
     // Constructors
     public Cloud(BufferedImage img, int x, int y) {
         super();
-        this.img = img;
-        this.x = x;
-        this.y = y;
-        this.speed = Constant.GAME_SPEED * 2; // Speed of clouds
+        this.cloudImg = img;
+        this.cloudX = x;
+        this.cloudY = y;
+        this.cloudSpeed = Constant.GAME_SPEED * 2;
         // Scale of cloud image scaling 1.0~2.0
-        double scale = 1 + Math.random(); // Math.random() returns a random value from 0.0 to 1.0
+        double scale = 1 + Math.random();
         // Zooming clouds image
-        scaleImageWidth = (int) (scale * img.getWidth());
-        scaleImageHeight = (int) (scale * img.getWidth());
+        cloudImageWidth = (int) (scale * img.getWidth());
+        cloudImageHeight = (int) (scale * img.getWidth());
     }
 
     // Drawing method
     public void draw(Graphics g, Bird bird) {
-        int speed = this.speed;
+        int speed = this.cloudSpeed;
         if (bird.isDead())
             speed = 1;
-        x -= speed;
-        g.drawImage(img, x, y, scaleImageWidth, scaleImageHeight, null);
+        cloudX -= speed;
+        g.drawImage(cloudImg, cloudX, cloudY, cloudImageWidth, cloudImageHeight, null);
     }
 
     /**
@@ -51,7 +51,7 @@ public class Cloud {
      * Returns true if it flies out, otherwise false
      */
     public boolean isOutFrame() {
-        return x < -1 * scaleImageWidth;
+        return cloudX < -1 * cloudImageWidth;
     }
 
 }

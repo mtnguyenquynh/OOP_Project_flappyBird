@@ -15,9 +15,9 @@ import java.awt.image.BufferedImage;
  *
  */
 public class GameOverAnimation {
-    private final BufferedImage scoreImg; // Scoreboard
-    private final BufferedImage overImg; // End marks
-    private final BufferedImage againImg; // Continue the logo
+    private final BufferedImage scoreImg;
+    private final BufferedImage overImg;
+    private final BufferedImage againImg;
 
     public GameOverAnimation(){
         overImg = GameUtil.loadBufferedImage(Constant.OVER_IMG_PATH);
@@ -25,15 +25,14 @@ public class GameOverAnimation {
         againImg = GameUtil.loadBufferedImage(Constant.AGAIN_IMG_PATH);
     }
 
-    private static final int SCORE_LOCATE = 5; // Scoreboard position compensation parameters
-    private int flash = 0; // Image blinking parameters
+    private static final int SCORE_LOCATE = 5;
+    private int flash = 0;
 
     public void draw(Graphics g, Bird bird) {
         int x = Constant.FRAME_WIDTH - overImg.getWidth() >> 1;
         int y = Constant.FRAME_HEIGHT / 4;
         g.drawImage(overImg, x, y, null);
 
-        // Drawing the scoreboard
         x = Constant.FRAME_WIDTH - scoreImg.getWidth() >> 1;
         y = Constant.FRAME_HEIGHT / 3;
         g.drawImage(scoreImg, x+8, y, null);

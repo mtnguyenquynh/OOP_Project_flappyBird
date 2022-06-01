@@ -10,10 +10,9 @@ import javax.sound.sampled.*;
 
 
 /**
- * 音乐工具类
+ * Play sounds effect class
  *
  * @author BUILD SUCCESSFUL
- * wav音频：JDK提供的类可直接解码 mp3音频：JDK没有提供支持，需要使用第三方的工具包
  */
 public class Sound {
     private static AudioInputStream flySound;
@@ -21,7 +20,6 @@ public class Sound {
     private static AudioInputStream scoreSound;
     private static Clip clip;
 
-        // wav播放
         public static void playFly() {
             try {
                 flySound = AudioSystem.getAudioInputStream(new File("resources/wav/fly.wav"));
@@ -68,6 +66,5 @@ public class Sound {
             throw new RuntimeException(e);
         }
     }
-
-    }
+}
 

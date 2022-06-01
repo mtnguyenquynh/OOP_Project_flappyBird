@@ -19,13 +19,10 @@ import javax.imageio.ImageIO;
 public class GameUtil {
 
     private GameUtil() {
-    } // Privatize to prevent other classes from instantiating such
+    }
 
     /**
      * Method of loading images
-     *
-     * @param imgPath Image path
-     * @return Image Resources
      */
     public static BufferedImage loadBufferedImage(String imgPath) {
         try {
@@ -81,15 +78,6 @@ public class GameUtil {
         FontRenderContext frc = new FontRenderContext(affinetransform, true, true);
         return (int) (font.getStringBounds(str, frc).getHeight());
     }
-
-
-    /**
-     *
-     * @param image Image Resources
-     * @param x is x coordinate
-     * @param y is y coordinate
-     * @param g is brushes
-     */
     public static void drawImage(BufferedImage image, int x, int y, Graphics g) {
         g.drawImage(image, x, y, null);
     }
