@@ -28,7 +28,7 @@ public class Cloud {
         this.cloudImg = img;
         this.cloudX = x;
         this.cloudY = y;
-        this.cloudSpeed = Constant.GAME_SPEED * 2;
+        this.cloudSpeed = Constant.GAME_SPEED*2;
         // Scale of cloud image scaling 1.0~2.0
         double scale = 1 + Math.random();
         // Zooming clouds image

@@ -47,9 +47,9 @@ public class Constant {
 	public static final int FPS = 1000 / 30;
 	public static final int TOP_BAR_HEIGHT = 20;
 	public static final int TOP_PIPE_LENGTHENING = 100;
-	public static final int CLOUD_BORN_PERCENT = 6; // Cloud formation probability (%)
-	public static final int CLOUD_IMAGE_NUMBER = 2; // Number of images from cloud to cloud (%)
-	public static final int MAX_CLOUD_NUMBERT = 7; // Maximum number of clouds
+	public static final int CLOUD_BORN_PERCENT = 6;
+	public static final int CLOUD_IMAGE_NUMBER = 2;
+	public static final int MAX_CLOUD_NUMBER = 7;
 	public static final Font CURRENT_SCORE_FONT = new Font("Mandarin Amber", Font.BOLD, 32);
 	public static final Font SCORE_FONT = new Font("Mandarin Amber", Font.BOLD, 24);
 

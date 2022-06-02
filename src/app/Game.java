@@ -122,16 +122,15 @@ public class Game extends Frame {
         setGameState(GAME_READY);
 
         // Start the thread for refreshing the window
-        new Thread(() ->{
-            while (true) {
-                repaint(); // Let the JVM call update() by calling repaint()
-                try {
-                    Thread.sleep(FPS);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }
-            }
-        }).start();
+        while(true){
+        Thread thread = new Thread();
+        repaint();
+        try {
+            Thread.sleep(FPS);
+        } catch (InterruptedException e){
+            e.printStackTrace();
+        }
+        thread.start();}
     }
 
     // There are two threads in the project: the system thread, and a custom thread: the call to repaint().
@@ -145,8 +144,9 @@ public class Game extends Frame {
      * Draw the game content When the repaint() method is called, the JVM calls update() with the parameter g, which is a system-supplied brush, instantiated by the system
      * Start a separate thread and keep calling repaint() quickly to let the system repaint the whole window
      */
+    @Override
     public void update(Graphics g) {
-        Graphics bufG = bufImg.getGraphics(); //Get the picture
+        Graphics bufG = bufImg.getGraphics();
         // Use the picture brush to draw what needs to be drawn to the picture
         background.draw(bufG, bird); // Background layer
         foreground.draw(bufG, bird); // Foreground layer

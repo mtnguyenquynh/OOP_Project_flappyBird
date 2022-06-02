@@ -32,7 +32,7 @@ public class WelcomeAnimation {
 		// Image blink
 		final int CYCLE = 30; // Blink Cycle
 		if (flashCount++ > CYCLE)
-			GameUtil.drawImage(noticeImg, Constant.FRAME_WIDTH - noticeImg.getWidth() >> 1, Constant.FRAME_HEIGHT / 5 * 3, g);
+			GameUtil.drawImage(noticeImg, Constant.FRAME_WIDTH - noticeImg.getWidth() -50, Constant.FRAME_HEIGHT / 5 * 3, g);
 		if (flashCount == CYCLE * 2)
 			flashCount = 0;
 	}

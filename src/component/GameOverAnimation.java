@@ -40,26 +40,27 @@ public class GameOverAnimation {
         // Plotting the Bird's score 
         g.setColor(Color.yellow);
         g.setFont(Constant.SCORE_FONT);
-        x = (Constant.FRAME_WIDTH - scoreImg.getWidth() / 2 >> 1) + SCORE_LOCATE;// Position compensation
-        y += scoreImg.getHeight() >> 1;
+        x = ((Constant.FRAME_WIDTH - scoreImg.getWidth() / 2) + SCORE_LOCATE)/2;// Position compensation
+        y += scoreImg.getHeight() /2;
         String str = Long.toString(bird.getCurrentScore());
-        x -= GameUtil.getStringWidth(Constant.SCORE_FONT, str) >> 1;
+        x -= GameUtil.getStringWidth(Constant.SCORE_FONT, str) /2;
         y += GameUtil.getStringHeight(Constant.SCORE_FONT, str);
         g.drawString(str, x+8, y-15);
 
         // Plot the highest score
         if (bird.getBestScore() > 0) {
             str = Long.toString(bird.getBestScore());
-            x = (Constant.FRAME_WIDTH + scoreImg.getWidth() / 2 >> 1) - SCORE_LOCATE;
-            x -= GameUtil.getStringWidth(Constant.SCORE_FONT, str) >> 1;
+            x = ((Constant.FRAME_WIDTH + scoreImg.getWidth() / 2) - SCORE_LOCATE)/2;
+            x -= GameUtil.getStringWidth(Constant.SCORE_FONT, str) /2;
             g.drawString(str, x-10, y-15);
         }
 
         // Drawing continues the game, the image flashes
         final int COUNT = 30; //  Blink Cycle
         if (flash++ > COUNT)
-            GameUtil.drawImage(againImg,Constant.FRAME_WIDTH - againImg.getWidth() >> 1, Constant.FRAME_HEIGHT / 5 *3+50, g);
+            GameUtil.drawImage(againImg,Constant.FRAME_WIDTH - againImg.getWidth()-50, Constant.FRAME_HEIGHT / 5 *3+50, g);
         if (flash == COUNT * 2) // Reset blinking parameters
             flash = 0;
+
     }
 }

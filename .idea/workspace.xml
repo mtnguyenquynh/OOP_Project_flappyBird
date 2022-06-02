@@ -3,33 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="afde5f60-6009-4fb9-a09f-2748f6e81923" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Bird.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Bird.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Cloud.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Cloud.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/MovingPipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/MovingPipe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Pipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Pipe.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/PipePool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/PipePool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/score" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/score" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/util/Constant.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/util/Constant.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/pipe_bottom.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/pipe_bottom.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/img/pipe_top.png" beforeDir="false" afterPath="$PROJECT_DIR$/resources/img/pipe_top.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/score" beforeDir="false" afterPath="$PROJECT_DIR$/resources/score" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Bird.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Cloud.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Cloud.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/GameBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameBackground.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/GameElementLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameElementLayer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/GameForeground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameForeground.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/GameOverAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameOverAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/MovingPipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/MovingPipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/Pipe.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Pipe.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/PipePool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/PipePool.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/ScoreCounter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/ScoreCounter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/WelcomeAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/WelcomeAnimation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/util/Constant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Constant.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/GameUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/GameUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Sound.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

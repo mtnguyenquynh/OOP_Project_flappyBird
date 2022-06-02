@@ -21,12 +21,12 @@ public class GameBackground {
 	private final int backGroundSpeed;
 	private int layerX; // Coordinates of the background layer
 
-	public static final int GROUND_HEIGHT;
+	public static final int BACK_GROUND_HEIGHT;
 
 	static {
 		BackgroundImg = GameUtil.loadBufferedImage(Constant.BG_IMG_PATH);
 		assert BackgroundImg != null;
-		GROUND_HEIGHT = BackgroundImg.getHeight() / 2;
+		BACK_GROUND_HEIGHT = BackgroundImg.getHeight() / 2;
 	}
 
 	public GameBackground() {
@@ -41,8 +41,7 @@ public class GameBackground {
 		int backgroundimgWidth = BackgroundImg.getWidth();
 		int imgHeight = BackgroundImg.getHeight();
 
-		int count = Constant.FRAME_WIDTH / backgroundimgWidth + 2; //  Get the number of times the image is drawn based on the window width
-		for (int i = 0; i < count; i++) {
+		for (int i = 0; i < 5; i++) {
 			g.drawImage(BackgroundImg, backgroundimgWidth * i - layerX, Constant.FRAME_HEIGHT - imgHeight, null);
 		}
 		if(bird.isDead()) {  

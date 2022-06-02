@@ -19,8 +19,6 @@ import util.GameUtil;
 public class GameForeground {
     private final List<Cloud> clouds;
     private final BufferedImage[] cloudImages;
-    private long time;
-    public static final int CLOUD_INTERVAL = 100; // Period of logical operations for cloud refreshing
 
     public GameForeground() {
         clouds = new ArrayList<>();
@@ -28,7 +26,6 @@ public class GameForeground {
         for (int i = 0; i < Constant.CLOUD_IMAGE_NUMBER; i++) {
             cloudImages[i] = GameUtil.loadBufferedImage(Constant.CLOUDS_IMG_PATH[i]);
         }
-        time = System.currentTimeMillis(); // Get the current time, which is used to control the logical operation cycle of the cloud
     }
 
     public void draw(Graphics g, Bird bird) {
@@ -39,11 +36,8 @@ public class GameForeground {
     }
 
     private void cloudBornLogic() {
-        // 100ms calculation once
-        if (System.currentTimeMillis() - time > CLOUD_INTERVAL) {
-            time = System.currentTimeMillis(); // Reset time
             // If the number of clouds on the screen is less than the maximum number allowed, add clouds randomly according to the given probability
-            if (clouds.size() < Constant.MAX_CLOUD_NUMBERT) {
+            if (clouds.size() < Constant.MAX_CLOUD_NUMBER) {
                 try {
                     if (GameUtil.isInProbability(Constant.CLOUD_BORN_PERCENT, 100)) { // Add clouds according to the given probability
                         int index = GameUtil.getRandomNumber(0, Constant.CLOUD_IMAGE_NUMBER); // Randomly selected cloud images
@@ -71,4 +65,4 @@ public class GameForeground {
             }
         }
     }
-}
+
