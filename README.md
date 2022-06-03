@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
+
 # OOP_Project_flappyBird
 ## Introduction
 ### Team name: BUILD SUCCESSFUL  
