@@ -1,5 +1,5 @@
-[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
-
+[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE) ![GitHub top language](https://img.shields.io/github/languages/top/mtnguyenquynh/OOP_Project_flappyBird) ![GitHub branch checks state](https://img.shields.io/github/checks-status/mtnguyenquynh/OOP_Project_flappyBird/main)
+![GitHub last commit](https://img.shields.io/github/last-commit/mtnguyenquynh/OOP_Project_flappyBird)
 # OOP_Project_flappyBird
 ## Introduction
 ### Team name: BUILD SUCCESSFUL  
