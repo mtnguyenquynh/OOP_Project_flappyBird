@@ -51,7 +51,6 @@ public class Bird {
     public Bird() {
         scoreCounter = ScoreCounter.getInstance();
         gameOverAnimation = new GameOverAnimation();
-
         // Read birdie image resources
         birdImages = new BufferedImage[STATE_NUMBER][IMG_TOTAL_NUMBER];
         for (int i = 0; i < STATE_NUMBER; i++) {

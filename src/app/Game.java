@@ -9,18 +9,13 @@ import component.WelcomeAnimation;
 import component.GameElementLayer;
 import util.Constant;
 
-import static util.Constant.FRAME_HEIGHT;
-import static util.Constant.FRAME_WIDTH;
-import static util.Constant.FRAME_X;
-import static util.Constant.FRAME_Y;
-import static util.Constant.FPS;
-import static util.Constant.GAME_TITLE;
-
 import java.awt.Frame;
 import java.awt.Graphics;
 import java.awt.Toolkit;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
+
+import static util.Constant.*;
 
 /**
  * Class contains frame and objects in game
@@ -78,16 +73,16 @@ public class Game extends Frame {
                     break;
                 case GAME_START:
                     if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
-        /* Pressing space or up button during the game
-         * will make the wings vibrate once 
-         * and continue to be affected by gravity */                     
+                        /* Pressing space or up button during the game
+                         * will make the wings vibrate once
+                         * and continue to be affected by gravity */
                         bird.birdFlap();
                         bird.birdFall();
                     }
                     break;
                 case GAME_OVER:
                     if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
-                          resetGame();
+                        resetGame();
                     }
                     break;
             }

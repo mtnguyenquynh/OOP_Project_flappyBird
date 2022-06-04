@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="afde5f60-6009-4fb9-a09f-2748f6e81923" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/wav/intro.wav" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/GameBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameBackground.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game$BirdKeyListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game$BirdKeyListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Bird.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Bird.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameBackground.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameBackground.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/util/Sound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/util/Sound.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Bird.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/GameElementLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameElementLayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/WelcomeAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/WelcomeAnimation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/util/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Sound.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +28,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="UML Class" />
         <option value="Class" />
       </list>
     </option>
@@ -39,18 +52,23 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultPlantUmlFileTemplate&quot;: &quot;UML Class&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/WIN 10/IdeaProjects/OOP_Project_flappyBird/src/component&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/WIN 10/IdeaProjects/OOP_Project_flappyBird/resources/wav&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/WIN 10/IdeaProjects/OOP_Project_flappyBird&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\WIN 10\IdeaProjects\OOP_Project_flappyBird\resources\wav" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\WIN 10\IdeaProjects\OOP_Project_flappyBird\resources\wav" />
     </key>
   </component>

@@ -36,5 +36,4 @@ public class WelcomeAnimation {
 		if (flashCount == CYCLE * 2)
 			flashCount = 0;
 	}
-
 }
