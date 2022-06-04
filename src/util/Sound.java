@@ -18,6 +18,8 @@ public class Sound {
     private static AudioInputStream flySound;
     private static AudioInputStream crashSound;
     private static AudioInputStream scoreSound;
+
+    private static AudioInputStream introSound;
     private static Clip clip;
 
         public static void playFly() {
@@ -57,6 +59,22 @@ public class Sound {
             clip = AudioSystem.getClip();
 
             clip.open(scoreSound);
+            clip.start();
+
+        } catch (IOException ignored) {
+        } catch (UnsupportedAudioFileException e) {
+            throw new RuntimeException(e);
+        } catch (LineUnavailableException e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void playIntro() {
+        try {
+            introSound = AudioSystem.getAudioInputStream(new File("resources/wav/intro.wav"));
+            clip = AudioSystem.getClip();
+
+            clip.open(introSound);
             clip.start();
 
         } catch (IOException ignored) {

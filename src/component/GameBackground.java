@@ -21,12 +21,9 @@ public class GameBackground {
 	private final int backGroundSpeed;
 	private int layerX; // Coordinates of the background layer
 
-	public static final int BACK_GROUND_HEIGHT;
-
 	static {
 		BackgroundImg = GameUtil.loadBufferedImage(Constant.BG_IMG_PATH);
 		assert BackgroundImg != null;
-		BACK_GROUND_HEIGHT = BackgroundImg.getHeight() / 2;
 	}
 
 	public GameBackground() {
