@@ -1,7 +1,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE) ![GitHub top language](https://img.shields.io/github/languages/top/mtnguyenquynh/OOP_Project_flappyBird) ![GitHub branch checks state](https://img.shields.io/github/checks-status/mtnguyenquynh/OOP_Project_flappyBird/main)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mtnguyenquynh/OOP_Project_flappyBird)
 # OOP_Project_flappyBird  ![alt](https://i.imgur.com/aDQhdFK.png)
-## Introduction
+## Introduction 
 ### Team name: BUILD SUCCESSFUL  
 Our team member
 |Index    | Name      | ID  | Email |
@@ -28,7 +28,9 @@ The reason we chose Flappy Bird is because it is a simple game that fully demons
 ### Environment
 Language: Java  
 Library: javax  
-Framework: 
+Framework:  
+
+## Game logic
 
 ### UML Class Diagrams  
 Show your github project page:  
@@ -37,13 +39,26 @@ Show your github project page:
 README (the report)
 Team Commits in github
 Feature:
-Which features are completed
-Which features are incompleted
-Future features if you want to developer further after the course
-Discuss challenges in the project.
-Result and Conclusion
-Screenshots/Videos/GIF of your topic to showcase all features.  
+Which features are completed  
+Moving pipe, Sound, Score, Bird Flapping  
 
+
+Which features are incompleted  
+Sound volume control, change bird skins, change theme,...  
+
+Future features if you want to developer further after the course  
+Change bird skins, fight boss, more difficult game maps  
+
+
+Discuss challenges in the project.  
+
+Result and Conclusion  
+
+
+Screenshots/Videos/GIF of your topic to showcase all features.   
+#### Bird  
+#### ôie
+#### Demo
 https://user-images.githubusercontent.com/91582358/171908586-65041e94-6ebb-41e9-b411-1fe3b69e6858.mp4
 
 ### What we have learned
