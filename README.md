@@ -1,6 +1,6 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE) ![GitHub top language](https://img.shields.io/github/languages/top/mtnguyenquynh/OOP_Project_flappyBird) ![GitHub branch checks state](https://img.shields.io/github/checks-status/mtnguyenquynh/OOP_Project_flappyBird/main)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mtnguyenquynh/OOP_Project_flappyBird)
-# OOP_Project_flappyBird
+# OOP_Project_flappyBird  ![alt](https://i.imgur.com/aDQhdFK.png)
 ## Introduction
 ### Team name: BUILD SUCCESSFUL  
 Our team member
@@ -25,11 +25,12 @@ The reason we chose Flappy Bird is because it is a simple game that fully demons
 |4| Design UI, Handle Collision and Score Class, Make Powerpoint | Anh Tú||25|  
 
 ## About our game (language/library/framework)
+### Environment
 Language: Java  
 Library: javax  
 Framework: 
-Show all required diagrams and explain them.  
-UML Class Diagrams  
+
+### UML Class Diagrams  
 Show your github project page:  
 [OOP_Project_FlappyBird](https://github.com/mtnguyenquynh/OOP_Project_flappyBird.git)  
 
@@ -45,7 +46,7 @@ Screenshots/Videos/GIF of your topic to showcase all features.
 
 https://user-images.githubusercontent.com/91582358/171908586-65041e94-6ebb-41e9-b411-1fe3b69e6858.mp4
 
-What have you learned?  
+### What we have learned
 Abstract class  
 Inheritance  
 Thread  
