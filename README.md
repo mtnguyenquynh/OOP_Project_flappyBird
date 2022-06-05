@@ -1,3 +1,11 @@
+
+# Table of contents
+1. [Introduction](#Introduction)
+
+
+## This is the introduction <a name="Introduction"></a>
+
+
 ![image](https://user-images.githubusercontent.com/91582358/172048415-99cb70b4-d073-4a3d-b4e5-9802cbb21d4c.png)  
 
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE) ![GitHub top language](https://img.shields.io/github/languages/top/mtnguyenquynh/OOP_Project_flappyBird) ![GitHub branch checks state](https://img.shields.io/github/checks-status/mtnguyenquynh/OOP_Project_flappyBird/main)
