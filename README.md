@@ -8,7 +8,7 @@ Our team member
 | :------------ |   :---:       | :--------: |:-----:|
 | 1       | Nguyễn Quỳnh Mai Thanh        | ITITIU20309   | mtnguyenquynh@gmail.com |
 | 2         | Nguyễn Trần Minh Trung       | ITITIU20332  | |
-|3| Trần Quang Trí | ITITIU20325||
+|3| Trần Quang Trí | ITITIU20325| ititiu20325@student.hcmiu.edu.vn |
 |4| Nguyễn Huỳnh Anh Tú | ITITIU20337||
 
 ### Topic **Flappy Bird**  
