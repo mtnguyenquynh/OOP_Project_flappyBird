@@ -29,6 +29,8 @@ Language: Java
 Library: javax  
 Framework:  
 
+## How to play:  
+The bird will be controlled by the player to move up and down (using the space or up button) to cross the pipes. Each pass will be scored, if it hits the pipe or falls to the ground, it will not be scored and the game ends.
 ## Game logic :bulb:
 - The game will have 2 main threads: the system thread and the custom thread. The system flow is used to display the content on the frame and receive the window events that the user interacts with. Custom flow to run game elements (birds, columns, clouds, ...).
 - Calculate collision: when the coordinates of the bird intersect with the coordinates of the pipe, so they collide.
@@ -38,19 +40,22 @@ Framework:
 Show your github project page:  
 [OOP_Project_FlappyBird](https://github.com/mtnguyenquynh/OOP_Project_flappyBird.git)  
 
-README (the report)
+[![Readme](https://img.shields.io/badge/Readme-README.md-green)](./README)   
+
+README (the report)  
+
 Team Commits in github
 
-###Feature: :milky_way:
-Main Feature:
+###Feature: :milky_way:  
+**Main Feature:**
 - Use space press/ UP button to control bird speed and height
 - Record score 
 - Beautiful universe theme
 - Check when bird collide with pipe
-Extra feature:
+**Extra feature:**
 - Different type of pipes: normal, hover, moving pipe
 - Sound effects
-Future feature:
+**Future feature:**
 - Different bird skins
 - Ranking
 - Boss fighter (after getting over 100 pipes)
@@ -68,7 +73,7 @@ Result and Conclusion
 #### Bird  
 ![OOP_PROJECT-_FLAPPY-BIRD_-BUILD-SUCESSFUL-TEAM-2022-06-04-23-09-46](https://user-images.githubusercontent.com/91582358/172015395-1e57d717-a8db-4d59-a938-0e838ed451e7.gif)
 
-#### Pipe   
+#### Pipe  
 Normal pipe  
 ![](https://i.imgur.com/DuZzVLc.png)  
 Moving Pipe
@@ -77,17 +82,16 @@ Moving Pipe
 https://user-images.githubusercontent.com/91582358/172016750-8627933c-002d-4808-9ffa-5a6307f69d1b.mp4
 
 
-
 #### Demo :arrow_forward:
 https://user-images.githubusercontent.com/91582358/171908586-65041e94-6ebb-41e9-b411-1fe3b69e6858.mp4
 
 ### What we have learned :pencil:
-Abstract class  
 Inheritance  
 Thread  
 Probability  
 UI Design  
 Design Pattern
+Animation
 
 ## References :book:
 Thanks to the incredibly rich resources that helped us make this project happen 
