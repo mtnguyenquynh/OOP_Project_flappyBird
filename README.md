@@ -1,17 +1,17 @@
-
-# Table of contents
-1. [Introduction](#Introduction)
-
-
-## This is the introduction <a name="Introduction"></a>
-
-
-![image](https://user-images.githubusercontent.com/91582358/172048415-99cb70b4-d073-4a3d-b4e5-9802cbb21d4c.png)  
-
+![image](https://user-images.githubusercontent.com/91582358/172048415-99cb70b4-d073-4a3d-b4e5-9802cbb21d4c.png)      
+  
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE) ![GitHub top language](https://img.shields.io/github/languages/top/mtnguyenquynh/OOP_Project_flappyBird) ![GitHub branch checks state](https://img.shields.io/github/checks-status/mtnguyenquynh/OOP_Project_flappyBird/main)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mtnguyenquynh/OOP_Project_flappyBird)
+  
+# Table of contents :round_pushpin:
+1. [Introduction](#Introduction)
+2. [Game](#Game)
+3. [Screenshot](#Screenshot)
+4. [Play game](#Play)
+5. [References](#References)
+
 # OOP_Project_flappyBird  ![alt](https://i.imgur.com/aDQhdFK.png)
-## Introduction :smile:
+## Introduction <a name="Introduction"></a> :smile:
 ### Team name: BUILD SUCCESSFUL :star_struck:
 ### Our team member
 |Index    | Name      | ID  | Email |
@@ -33,7 +33,7 @@ The reason we chose Flappy Bird is because it is a simple game that fully demons
 |3| Handle pipe class and it movement, UML diagram | Quang Trí||25|
 |4| Design UI, Handle Collision and Score Class, Make Powerpoint | Anh Tú||25|  
 
-## About our game (language/library/framework) :rocket:
+## Play game <a name="Game"></a> :rocket:
 ### Requirement for software:  
 
 ### Environment :computer:
@@ -81,7 +81,7 @@ Show your github project page:
 -  Luckily, we found excellent and detailed references that helped us refine our original idea and add cool features. 
 -  Through this project we believe we will be able to make better use of OOP.
 
-## Screenshot :star2:
+## Screenshot <a name="Screenshot"></a> :star2:
 ### Bird  
 ![OOP_PROJECT-_FLAPPY-BIRD_-BUILD-SUCESSFUL-TEAM-2022-06-04-23-09-46](https://user-images.githubusercontent.com/91582358/172015395-1e57d717-a8db-4d59-a938-0e838ed451e7.gif)
 
@@ -103,12 +103,12 @@ UI Design
 Design Pattern
 Animation
 
-## Set up game:  
+## Play game <a name="Play"></a> 
 Step 1: Clone following repository to your local   
 Step 2: Run game in "App" class   
 Step 3: Enjoy the game and reach the high score
 
-## References :book:
+## References <a name="References"></a> :book:
 Thanks to the incredibly rich resources that helped us make this project happen 
 1. [kingyuluk](https://github.com/kingyuluk/FlappyBird.git)  
 2. [Sound effect handling](https://stackoverflow.com/questions/11919009/using-javax-sound-sampled-clip-to-play-loop-and-stop-multiple-sounds-in-a-game)  
