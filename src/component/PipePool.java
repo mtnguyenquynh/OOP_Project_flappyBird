@@ -1,9 +1,7 @@
 package component;
 
 import java.util.ArrayList;
-
 import java.util.List;
-
 import util.Constant;
 
 /**
@@ -17,8 +15,11 @@ import util.Constant;
  *
  */
 public class PipePool {
+	// Containers for objects in the pool
 	private static final List<Pipe> normalPool = new ArrayList<>();
 	private static final List<MovingPipe> movingPool = new ArrayList<>();
+	// Maximum number of objects in the object pool 
+	// Note: self-defined = 30
 	public static final int MAX_PIPE_NUMBER = 30;
 	public static final int FULL_PIPE = (Constant.FRAME_WIDTH
 			/ (Pipe.PIPE_HEAD_WIDTH + GameElementLayer.HORIZONTAL_INTERVAL) + 2) * 2;
