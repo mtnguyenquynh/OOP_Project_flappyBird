@@ -25,13 +25,13 @@ public class Pipe {
     }
 
     // Width and height of all water pipes
-    public static final int PIPE_WIDTH = pipeImage[0].getWidth();
-    public static final int PIPE_HEIGHT = pipeImage[0].getHeight();
     public static final int PIPE_HEAD_WIDTH = pipeImage[1].getWidth();
     public static final int PIPE_HEAD_HEIGHT = pipeImage[1].getHeight();
+    public static final int PIPE_WIDTH = pipeImage[0].getWidth();
+    public static final int PIPE_HEIGHT = pipeImage[0].getHeight();
 
-    int pipeX, pipeY;
     int width, height;
+    int pipeX, pipeY;
 
     boolean visible; // Water pipe visible status, true is visible, false means can be returned to the object pool
     // Type of water pipe
@@ -74,12 +74,6 @@ public class Pipe {
         pipeRect.y = y;
         pipeRect.height = height;
     }
-
-    public boolean isVisible() {
-        return visible;
-    }
-    
-    // Drawing method
     public void draw(Graphics g, Bird bird) {
         //Draw the collision rectangle
         switch (type) {
@@ -99,6 +93,12 @@ public class Pipe {
         }
         movement();
     }
+
+    public boolean isVisible() {
+        return visible;
+    }
+    
+    // Drawing method
 
     // Draw the normal water pipe from top to bottom
     private void drawTopNormal(Graphics g) {
