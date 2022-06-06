@@ -41,8 +41,8 @@ public class Bird {
 
     private final Rectangle birdCollisionRect;
     public static final int RECT_DESCALE = 2;
-    private final ScoreCounter scoreCounter;
-    private final GameOverAnimation gameOverAnimation;
+    private final component.ScoreCounter scoreCounter;
+    private final component.GameOverAnimation gameOverAnimation;
 
     public static int BIRD_WIDTH;
     public static int BIRD_HEIGHT;

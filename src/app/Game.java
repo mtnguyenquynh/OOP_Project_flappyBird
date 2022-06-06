@@ -7,6 +7,7 @@ import component.GameBackground;
 import component.GameForeground;
 import component.WelcomeAnimation;
 import component.GameElementLayer;
+import component.BirdKeyListener;
 import util.Constant;
 
 import java.awt.Frame;
@@ -33,8 +34,8 @@ public class Game extends Frame {
 
     private GameBackground background;
     private GameForeground foreground;
-    private Bird bird;
-    private GameElementLayer gameElement;
+    private static Bird bird;
+    private static GameElementLayer gameElement;
     private WelcomeAnimation welcomeAnimation;
 
     public Game() {
@@ -49,7 +50,7 @@ public class Game extends Frame {
         setLocation(FRAME_X, FRAME_Y);
         setResizable(false); 
         setIconImage(Toolkit.getDefaultToolkit().getImage(Constant.ICON_IMG_PATH));
-        
+
         addWindowListener(new WindowAdapter() {
             @Override
             public void windowClosing(WindowEvent e) {
@@ -57,54 +58,6 @@ public class Game extends Frame {
             }
         });
         addKeyListener(new BirdKeyListener());
-    }
-
-    class BirdKeyListener implements KeyListener{
-        // Press the button to call different methods based on the game status
-        public void keyPressed(KeyEvent e) {
-            int keycode = e.getKeyCode();
-            switch (gameState) {
-                case GAME_READY:
-                    if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
-                        bird.birdFlap();
-                        bird.birdFall();
-                        setGameState(GAME_START);
-                    }
-                    break;
-                case GAME_START:
-                    if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
-                        /* Pressing space or up button during the game
-                         * will make the wings vibrate once
-                         * and continue to be affected by gravity */
-                        bird.birdFlap();
-                        bird.birdFall();
-                    }
-                    break;
-                case GAME_OVER:
-                    if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
-                        resetGame();
-                    }
-                    break;
-            }
-        }
-       	
-		// Restart game
-        private void resetGame() {
-            setGameState(GAME_READY);
-            gameElement.reset();
-            bird.reset();
-        }
-
-        // Key release, change key status flag
-         public void keyReleased(KeyEvent e) {
-            int keycode = e.getKeyCode();
-            if (keycode == KeyEvent.VK_SPACE || keycode == KeyEvent.VK_UP) {
-                bird.keyReleased();
-            }
-        }
-
-        public void keyTyped(KeyEvent e) {
-        }
     }
 
     // Initialize each object in the game
@@ -151,13 +104,25 @@ public class Game extends Frame {
             gameElement.draw(bufG, bird); // Game element layer
         }
         bird.draw(bufG);
-        g.drawImage(bufImg, 0, 0, null); 
+        g.drawImage(bufImg, 0, 0, null);
         // Draw pictures to the screen in one go 
 
     }
 
+    public static int getGameState() {
+        return gameState;
+    }
+
     public static void setGameState(int gameState) {
         Game.gameState = gameState;
+    }
+
+    public static GameElementLayer getGameElement() {
+        return gameElement;
+    }
+
+    public static Bird getBird() {
+        return bird;
     }
 
 }

@@ -3,20 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="afde5f60-6009-4fb9-a09f-2748f6e81923" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game$BirdKeyListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game$BirdKeyListener.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Bird.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Bird.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameBackground.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameBackground.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameElementLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameElementLayer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/util/Sound.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/util/Sound.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameForeground.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameForeground.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/PipePool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/PipePool.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Bird.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Bird.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/GameBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameBackground.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/GameElementLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameElementLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/WelcomeAnimation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/WelcomeAnimation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/util/Sound.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/util/Sound.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/PipePool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/PipePool.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
