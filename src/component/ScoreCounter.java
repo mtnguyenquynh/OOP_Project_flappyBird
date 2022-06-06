@@ -24,13 +24,15 @@ public class ScoreCounter {
 		private static final ScoreCounter scoreCounter = new ScoreCounter();
 	}
 
-	public static ScoreCounter getInstance() {
-		return ScoreCounterHolder.scoreCounter;
+	private long bestScore;
+	private long score = 0;
+
+	public void score(Bird bird) {
+		if (!bird.isDead()) {
+			Sound.playScore();
+			score += 1;
+		}
 	}
-
-	private long score = 0; 
-	private long bestScore; 
-
 	private ScoreCounter() {
 		bestScore = -1;
 		try {
@@ -39,16 +41,6 @@ public class ScoreCounter {
 			e.printStackTrace();
 		}
 	}
-
-	private void loadBestScore() throws Exception {
-		File file = new File(Constant.SCORE_FILE_PATH);
-		if (file.exists()) {
-			DataInputStream dataInputStream = new DataInputStream(new FileInputStream(file));
-			bestScore = dataInputStream.readLong();
-			dataInputStream.close();
-		}
-	}
-
 	public void saveScore() {
 		bestScore = Math.max(bestScore, getCurrentScore());
 		try {
@@ -60,24 +52,27 @@ public class ScoreCounter {
 			e.printStackTrace();
 		}
 	}
-
-	public void score(Bird bird) {
-		if (!bird.isDead()) {
-			Sound.playScore();
-			score += 1;
+	private void loadBestScore() throws Exception {
+		File file = new File(Constant.SCORE_FILE_PATH);
+		if (file.exists()) {
+			DataInputStream dataInputStream = new DataInputStream(new FileInputStream(file));
+			bestScore = dataInputStream.readLong();
+			dataInputStream.close();
 		}
 	}
-
-	public long getBestScore() {
-		return bestScore;
+	public void reset() {
+		score = 0;
 	}
 
 	public long getCurrentScore() {
 		return score;
 	}
-
-	public void reset() {
-		score = 0;
+	public long getBestScore() {
+		return bestScore;
 	}
+	public static ScoreCounter getInstance() {
+		return ScoreCounterHolder.scoreCounter;
+	}
+
 
 }
