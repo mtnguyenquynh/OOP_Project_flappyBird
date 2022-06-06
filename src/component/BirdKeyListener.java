@@ -40,7 +40,7 @@ public class BirdKeyListener implements KeyListener {
     }
 
     // Restart Game
-    public void resetGame() {
+    private void resetGame() {
         Game.setGameState(Game.GAME_READY);
         Game.getGameElement().reset();
         Game.getBird().reset();
