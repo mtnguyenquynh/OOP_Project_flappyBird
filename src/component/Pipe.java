@@ -1,8 +1,6 @@
 package component;
 
 import java.awt.*;
-
-
 import java.awt.image.BufferedImage;
 
 import util.Constant;
@@ -13,10 +11,11 @@ import util.GameUtil;
  * movement logic of the water pipe
  *
  * @author BUILD SUCCESSFUL
- */
+ **/
 public class Pipe {
-    static BufferedImage[] pipeImage;
+    static BufferedImage[] pipeImage; //Pictures of water pipes, make sure the pictures are loaded only once
 
+    // Initialize the image
     static {
         final int PIPE_IMAGE_COUNT = 3;
         pipeImage = new BufferedImage[PIPE_IMAGE_COUNT];
@@ -57,6 +56,7 @@ public class Pipe {
         pipeRect.width = PIPE_WIDTH;
     }
 
+    // Attribute of each water pipe parameter 
     public void setAttribute(int x, int y, int height, int type, boolean visible) {
         this.pipeX = x;
         this.pipeY = y;
@@ -68,7 +68,7 @@ public class Pipe {
 
     /**
      * Set collision rectangle parameters
-     */
+     **/
     public void setRectangle(int x, int y, int height) {
         pipeRect.x = x;
         pipeRect.y = y;
@@ -78,8 +78,10 @@ public class Pipe {
     public boolean isVisible() {
         return visible;
     }
-
+    
+    // Drawing method
     public void draw(Graphics g, Bird bird) {
+        //Draw the collision rectangle
         switch (type) {
             case TYPE_TOP_NORMAL:
                 drawTopNormal(g);
@@ -91,6 +93,7 @@ public class Pipe {
                 drawHoverNormal(g);
                 break;
         }
+        //The water pipe stops moving after the bird dies
         if (bird.isDead()) {
             return;
         }
@@ -150,6 +153,10 @@ public class Pipe {
         }
     }
 
+    /** 
+    * Determine if the current water pipe is fully present in the window
+    * Return Returns true if it is fully present, otherwise returns false
+    **/
     public boolean isInFrame() {
         return pipeX + width < Constant.FRAME_WIDTH;
     }
