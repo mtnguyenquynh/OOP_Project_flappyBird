@@ -5,7 +5,7 @@ import java.awt.Graphics;
 import util.Constant;
 
 /**
- * Mobile water pipe class, inherits Pipe class
+ * Moving water pipe class, inherits Pipe class
  *
  * @author BUILD SUCEESSFUL
  */
