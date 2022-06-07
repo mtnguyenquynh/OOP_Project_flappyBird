@@ -18,11 +18,12 @@ import util.GameUtil;
 
 public class GameElementLayer {
     private final List<Pipe> pipes;
-
+    // Constructors
     public GameElementLayer() {
         pipes = new ArrayList<>();
     }
 
+    // Drawing method
     public void draw(Graphics g, Bird bird) {
         // Iterate through the water pipe container, draw if visible, return if not
         for (int i = 0; i < pipes.size(); i++) {
@@ -61,7 +62,7 @@ public class GameElementLayer {
         }
         if (pipes.size() == 0) {
             // If the container is empty, add a pair of water pipes
-            int topHeight = GameUtil.getRandomNumber(MIN_PIPE_HEIGHT, MAX_PIPE_HEIGHT + 1);
+            int topHeight = GameUtil.getRandomNumber(MIN_PIPE_HEIGHT, MAX_PIPE_HEIGHT + 1); // Randomly generated water pipe height
 
             Pipe pipeTop = PipePool.get("Pipe");
             pipeTop.setAttribute(Constant.FRAME_WIDTH, -Constant.TOP_PIPE_LENGTHENING,
@@ -108,6 +109,10 @@ public class GameElementLayer {
         }
     }
 
+    /**
+     * Add ordinary water pipe
+     * lastPipe pass in the last pipe to get the x coordinate
+     */
     private void addNormalPipe(Pipe lastPipe) {
         // Randomly generated water pipe height
         int topHeight = GameUtil.getRandomNumber(MIN_PIPE_HEIGHT, MAX_PIPE_HEIGHT + 1);
@@ -126,6 +131,10 @@ public class GameElementLayer {
         pipes.add(pipeBottom);
     }
 
+    /**
+     * Add suspension water pipe
+     * lastPipe pass in the last pipe to get the x coordinate
+     */
     private void addHoverPipe(Pipe lastPipe) {
 
         // Randomly generated water pipe height, [1/4,1/6] of the screen height
@@ -151,6 +160,7 @@ public class GameElementLayer {
 
     }
 
+    // Adding a moving hover pipe
     private void addMovingHoverPipe(Pipe lastPipe) {
 
         // Randomly generated water pipe height, [1/4,1/6] of the screen height
@@ -174,6 +184,7 @@ public class GameElementLayer {
 
     }
 
+    // Add moving common water pipe
     private void addMovingNormalPipe(Pipe lastPipe) {
         // Randomly generated water pipe height
         int topHeight = GameUtil.getRandomNumber(MIN_PIPE_HEIGHT, MAX_PIPE_HEIGHT + 1);
@@ -200,6 +211,7 @@ public class GameElementLayer {
         if (bird.isDead()) {
             return;
         }
+        // Traversing the water pipe container
         for (Pipe pipe : pipes) {
             //  Determine if colliding rectangles have intersection
             if (pipe.getPipeRect().intersects(bird.getBirdCollisionRect())) {
