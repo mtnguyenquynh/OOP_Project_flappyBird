@@ -12,7 +12,6 @@ import util.Constant;
  * and return them when they are finished
  * 
  * @author BUILD SUCCESSFUL
- *
  */
 public class PipePool {
 	// Containers for objects in the pool
