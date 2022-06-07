@@ -7,19 +7,19 @@
 1. [Introduction](#Introduction)
 2. [Game](#Game)
 3. [Screenshot](#Screenshot)
-4. [Play game](#Play)
+4. [How to play](#(How to play))
 5. [References](#References)
 
 # OOP_Project_flappyBird  ![alt](https://i.imgur.com/aDQhdFK.png)
 ## Introduction <a name="Introduction"></a> :smile:
 ### Team name: BUILD SUCCESSFUL :star_struck:
 ### Our team member
-|Index    | Name      | ID  | Email |
-| :------------ |   :---:       | :--------: |:-----:|
-| 1       | Nguyễn Quỳnh Mai Thanh        | ITITIU20309   | mtnguyenquynh@gmail.com |
-| 2         | Nguyễn Trần Minh Trung       | ITITIU20332  | |
-|3| Trần Quang Trí | ITITIU20325| ititiu20325@student.hcmiu.edu.vn |
-|4| Nguyễn Huỳnh Anh Tú | ITITIU20337||
+|Index    | Name      | ID  |              Email               | Github account             
+| :------------ |   :---:       | :--------: |:--------------------------------:|:---------------------------|
+| 1       | Nguyễn Quỳnh Mai Thanh        | ITITIU20309   |     mtnguyenquynh@gmail.com      | mtnguyenquynh/ vickysmilen |
+| 2         | Nguyễn Trần Minh Trung       | ITITIU20332  |                                  |                            |
+|3| Trần Quang Trí | ITITIU20325| ititiu20325@student.hcmiu.edu.vn |                            |
+|4| Nguyễn Huỳnh Anh Tú | ITITIU20337||                                  |
 
 ### Topic **Flappy Bird**  
 Why we choose this topic :question:  
@@ -27,14 +27,14 @@ The reason we chose Flappy Bird is because it is a simple game that fully demons
   
 ### Tasks  
 |Index| Task      | PersonInCharge | Note | Contribution|
-|:---|   :-------------------------------------------------------| :--------: |:-----:|:-----:|
-| 1  | Write Readme, Make Sound Effect, UML diagram, Design UI       | Mai Thanh  ||25|
-| 2  | Handle bird class and it movement, Make Powerpoint| Minh Trung  | |25|
-|3| Handle pipe class and it movement, UML diagram | Quang Trí||25|
-|4| Design UI, Handle Collision and Score Class, Make Powerpoint | Anh Tú||25|  
+|:---|   :-------------------------------------------------------| :--------: |:----:|:-----:|
+| 1  | Write Readme, Make Sound Effect, UML diagram, Design UI       | Mai Thanh  |      |25|
+| 2  | Handle bird class and it movement, Make Powerpoint| Minh Trung  |      |25|
+|3| Handle pipe class and it movement, UML diagram | Quang Trí|      |  25  |
+|4| Design UI, Handle Collision and Score Class, Make Powerpoint | Anh Tú|      |  25  |  
 
-## Play game <a name="Game"></a> :rocket:
-### Requirement for software:  
+## GAME <a name="Game"></a> :rocket:
+## Requirement for software:  
 
 ### Environment :computer:
 Language: Java  
@@ -51,12 +51,10 @@ The bird will be controlled by the player to move up and down (using the space o
 - The logic of creating the flying bird effect: the bird will be animated by loading 16 consecutive bird image frames.
 
 ### UML Class Diagrams  
-Show your github project page:  
+### Project Page
 [OOP_Project_FlappyBird](https://github.com/mtnguyenquynh/OOP_Project_flappyBird.git)  
 ### README
 [Readme](README.md)  
-
-### Team Commits in github
 
 ### Feature:  
 **Main Feature:**
@@ -88,24 +86,21 @@ Show your github project page:
 ### Pipe  
 Normal pipe  
 ![](https://i.imgur.com/DuZzVLc.png)  
-Moving Pipe
-
-https://user-images.githubusercontent.com/91582358/172047633-87395e16-b474-420c-9e28-6970a6045491.mp4
-
+  
+Moving Pipe  
+![](../../Downloads/OOP_PROJECT-_FLAPPY-BIRD_-BUILD-SUCESSFUL-TEAM-2022-06-01-13-28-18_Trim.gif)
 ### Demo :arrow_forward:
-https://user-images.githubusercontent.com/91582358/171908586-65041e94-6ebb-41e9-b411-1fe3b69e6858.mp4
+![](../../Downloads/OOP_PROJECT-_FLAPPY-BIRD_-BUILD-SUCESSFUL-TEAM-2022-06-03-21-16-23_Trim.gif)
+### What we have learned :pencil:  
+Skills: Work in GitHub, Trello, Draw.io, Canva, Google docx,...handle some bugs and practice teamwork.   
+Knowledge: Inheritance, Thread, Probability, UI Design, Design Pattern, Animation, UML Diagram
 
-### What we have learned :pencil:
-Inheritance  
-Thread  
-Probability  
-UI Design  
-Design Pattern
-Animation
-
-## Play game <a name="Play"></a> 
-Step 1: Clone following repository to your local   
-Step 2: Run game in "App" class   
+## How to play <a name="How to play"></a> 
+Step 1: Clone following repository to your local  [FlappyBird_repository](https://github.com/mtnguyenquynh/OOP_Project_flappyBird.git)
+    IntelliJ: Copy the repository URL --> Open IntelliJ IDEA --> Choose "Get from VCS" --> Paste the URL on your clipboard to "URL" field --> Press Enter or Clone  
+    Eclipse: Copy the repository URL --> Open Eclipse IDE -->  Go to File --> Choose Import --> In folder Git choose Project from Git --> Choose Clone URL and click Next--> Paste URL in "URL" field and click Next --> Choose branch "main" and click Next --> Finish
+    VSCode: Copy the repository URL --> Open VSCode --> Ctrl + Shift + P --> Type "gitcl" --> Choose "Git Clone" and paste the URL in
+Step 2: Open "src" package --> Choose "App" class in "app" folder   
 Step 3: Enjoy the game and reach the high score
 
 ## References <a name="References"></a> :book:
