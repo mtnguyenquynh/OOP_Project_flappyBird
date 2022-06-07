@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="afde5f60-6009-4fb9-a09f-2748f6e81923" name="Changes" comment="" />
+    <list default="true" id="afde5f60-6009-4fb9-a09f-2748f6e81923" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Bird.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Bird.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/BirdKeyListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/BirdKeyListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Cloud.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Cloud.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameForeground.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameForeground.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/MovingPipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/MovingPipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Pipe.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/Pipe.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/PipePool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/PipePool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/ScoreCounter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/ScoreCounter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/GameBackground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameBackground.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/GameForeground.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameForeground.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +52,11 @@
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -89,5 +111,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/app/App.java</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

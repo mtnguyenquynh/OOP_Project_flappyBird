@@ -16,19 +16,18 @@ import util.GameUtil;
  */
 public class GameBackground {
 
-	private static final BufferedImage BackgroundImg;
-
-	private final int backGroundSpeed;
 	private int layerX; // Coordinates of the background layer
-
-	static {
-		BackgroundImg = GameUtil.loadBufferedImage(Constant.BG_IMG_PATH);
-		assert BackgroundImg != null;
-	}
+	private static final BufferedImage BackgroundImg;
+	private final int backGroundSpeed;
 
 	public GameBackground() {
 		this.backGroundSpeed = Constant.GAME_SPEED;
 		this.layerX = 0;
+	}
+
+	static {
+		BackgroundImg = GameUtil.loadBufferedImage(Constant.BG_IMG_PATH);
+		assert BackgroundImg != null;
 	}
 
 	public void draw(Graphics g, Bird bird) {
@@ -49,8 +48,7 @@ public class GameBackground {
 
 	// Motion logic of the background layer
 	private void movement() {
-		layerX += backGroundSpeed;
-		if (layerX > BackgroundImg.getWidth())
-			layerX = 0;
+		layerX = backGroundSpeed + layerX;
+		if (BackgroundImg.getWidth() < layerX) {layerX = 0;}
 	}
 }
