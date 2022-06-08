@@ -19,11 +19,6 @@ public class WelcomeAnimation {
 
 	private int flashCount = 0; // Image flicker parameters
 
-	public WelcomeAnimation() {
-		titleImg = GameUtil.loadBufferedImage(Constant.TITLE_IMG_PATH);
-		noticeImg = GameUtil.loadBufferedImage(Constant.NOTICE_IMG_PATH);
-	}
-
 	public void draw(Graphics g) {
 		int x = (Constant.FRAME_WIDTH - titleImg.getWidth()) >> 1;
 		int y = Constant.FRAME_HEIGHT / 3;
@@ -36,4 +31,11 @@ public class WelcomeAnimation {
 		if (flashCount == CYCLE * 2)
 			flashCount = 0;
 	}
+	public WelcomeAnimation() {
+		titleImg = GameUtil.loadBufferedImage(Constant.TITLE_IMG_PATH);
+		noticeImg = GameUtil.loadBufferedImage(Constant.NOTICE_IMG_PATH);
+	}
+
+
+
 }
