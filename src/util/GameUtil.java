@@ -21,17 +21,7 @@ public class GameUtil {
     private GameUtil() {
     }
 
-    /**
-     * Method of loading images
-     */
-    public static BufferedImage loadBufferedImage(String imgPath) {
-        try {
-            return ImageIO.read(new FileInputStream(imgPath));
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
+
 
     /**
      * Determine whether a probabilistic event of arbitrary probability occurs
@@ -51,6 +41,18 @@ public class GameUtil {
         }
 
         return getRandomNumber(1, denominator + 1) <= numerator;
+    }
+
+    /**
+     * Method of loading images
+     */
+    public static BufferedImage loadBufferedImage(String imgPath) {
+        try {
+            return ImageIO.read(new FileInputStream(imgPath));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     /**
