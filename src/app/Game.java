@@ -26,39 +26,26 @@ import static util.Constant.*;
  */
 
 public class Game extends Frame {
+    private GameBackground background;
+    private GameForeground foreground;
+    private static Bird bird;
+    private static GameElementLayer gameElement;
+    private WelcomeAnimation welcomeAnimation;
     private static final long serialVersionUID = 1L;
     private static int gameState; 
     public static final int GAME_READY = 0;
     public static final int GAME_START = 1;
     public static final int GAME_OVER = 2;
 
-    private GameBackground background;
-    private GameForeground foreground;
-    private static Bird bird;
-    private static GameElementLayer gameElement;
-    private WelcomeAnimation welcomeAnimation;
+
 
     public Game() {
         initFrame();
-        setVisible(true); 
+        setVisible(true);
         initGame();
     }
 
-    private void initFrame() {
-        setSize(FRAME_WIDTH, FRAME_HEIGHT);
-        setTitle(GAME_TITLE);
-        setLocation(FRAME_X, FRAME_Y);
-        setResizable(false); 
-        setIconImage(Toolkit.getDefaultToolkit().getImage(Constant.ICON_IMG_PATH));
 
-        addWindowListener(new WindowAdapter() {
-            @Override
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);
-            }
-        });
-        addKeyListener(new BirdKeyListener());
-    }
 
     // Initialize each object in the game
     private void initGame() {
@@ -79,6 +66,22 @@ public class Game extends Frame {
             e.printStackTrace();
         }
         thread.start();}
+    }
+
+    private void initFrame() {
+        setSize(FRAME_WIDTH, FRAME_HEIGHT);
+        setTitle(GAME_TITLE);
+        setLocation(FRAME_X, FRAME_Y);
+        setResizable(false);
+        setIconImage(Toolkit.getDefaultToolkit().getImage(Constant.ICON_IMG_PATH));
+
+        addWindowListener(new WindowAdapter() {
+            @Override
+            public void windowClosing(WindowEvent e) {
+                System.exit(0);
+            }
+        });
+        addKeyListener(new BirdKeyListener());
     }
 
     // There are two threads in the project: the system thread, and a custom thread: the call to repaint().
