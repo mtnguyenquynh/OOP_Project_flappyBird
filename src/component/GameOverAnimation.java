@@ -19,15 +19,16 @@ public class GameOverAnimation {
     private final BufferedImage overImg;
     private final BufferedImage againImg;
 
+
+
+    private static final int SCORE_LOCATE = 5;
+    private int flash = 0;
+
     public GameOverAnimation(){
         overImg = GameUtil.loadBufferedImage(Constant.OVER_IMG_PATH);
         scoreImg = GameUtil.loadBufferedImage(Constant.SCORE_IMG_PATH);
         againImg = GameUtil.loadBufferedImage(Constant.AGAIN_IMG_PATH);
     }
-
-    private static final int SCORE_LOCATE = 5;
-    private int flash = 0;
-
     public void draw(Graphics g, Bird bird) {
         int x = Constant.FRAME_WIDTH - overImg.getWidth() >> 1;
         int y = Constant.FRAME_HEIGHT / 4;
