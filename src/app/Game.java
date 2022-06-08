@@ -15,6 +15,7 @@ import java.awt.Graphics;
 import java.awt.Toolkit;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
+import java.io.Serial;
 
 import static util.Constant.*;
 
@@ -26,6 +27,7 @@ import static util.Constant.*;
  */
 
 public class Game extends Frame {
+    @Serial
     private static final long serialVersionUID = 1L;
     private static int gameState; 
     public static final int GAME_READY = 0;

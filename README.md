@@ -7,39 +7,40 @@
 1. [Introduction](#Introduction)
 2. [Game](#Game)
 3. [Screenshot](#Screenshot)
-4. [How to play](#(How to play))
+4. [Installation](#Installation)
 5. [References](#References)
 
 # OOP_Project_flappyBird  ![alt](https://i.imgur.com/aDQhdFK.png)
 ## Introduction <a name="Introduction"></a> :smile:
 ### Team name: BUILD SUCCESSFUL :star_struck:
 ### Our team member
-|Index    | Name      | ID  |              Email               | Github account             
-| :------------ |   :---:       | :--------: |:--------------------------------:|:---------------------------|
-| 1       | Nguyễn Quỳnh Mai Thanh        | ITITIU20309   |     mtnguyenquynh@gmail.com      | mtnguyenquynh/ vickysmilen |
-| 2         | Nguyễn Trần Minh Trung       | ITITIU20332  |                                  |                            |
-|3| Trần Quang Trí | ITITIU20325| ititiu20325@student.hcmiu.edu.vn |                            |
-|4| Nguyễn Huỳnh Anh Tú | ITITIU20337||                                  |
+| Index | Name                   |     ID      |              Email               | Github account             |
+|:------|:-----------------------|:-----------:|:--------------------------------:|:---------------------------|
+| 1     | Nguyễn Quỳnh Mai Thanh | ITITIU20309 |     mtnguyenquynh@gmail.com      | mtnguyenquynh/ vickysmilen |
+| 2     | Nguyễn Trần Minh Trung | ITITIU20332 |                                  |                            |
+| 3     | Trần Quang Trí         | ITITIU20325 | ititiu20325@student.hcmiu.edu.vn |                            |
+| 4     | Nguyễn Huỳnh Anh Tú    | ITITIU20337 |                                  |                            |           
 
 ### Topic **Flappy Bird**  
 Why we choose this topic :question:  
-The reason we chose Flappy Bird is because it is a simple game that fully demonstrates the essence of object-oriented programming. At the same time, we are also very curious about how the game set the Guinness World Record 2016 in terms of downloads and the huge revenue earned from it. We hope from this simple yet addictive game we can develop more features for it and keep this fun game.  
+The reason we chose Flappy Bird is that it is a simple game that fully demonstrates the essence of object-oriented programming. At the same time, we are also very curious about how the game set the Guinness World Record 2016 in terms of downloads and the huge revenue earned from it. We hope from this simple yet addictive game we can develop more features for it and keep this fun game.  
   
 ### Tasks  
-|Index| Task      | PersonInCharge | Note | Contribution|
-|:---|   :-------------------------------------------------------| :--------: |:----:|:-----:|
-| 1  | Write Readme, Make Sound Effect, UML diagram, Design UI       | Mai Thanh  |      |25|
-| 2  | Handle bird class and it movement, Make Powerpoint| Minh Trung  |      |25|
-|3| Handle pipe class and it movement, UML diagram | Quang Trí|      |  25  |
-|4| Design UI, Handle Collision and Score Class, Make Powerpoint | Anh Tú|      |  25  |  
+| Index | Task                                                         | PersonInCharge | Note | Contribution |
+|:------|:-------------------------------------------------------------|:--------------:|:----:|:------------:|
+| 1     | Write Readme, Make Sound Effect, UML diagram, Design UI      |   Mai Thanh    |      |      25      |
+| 2     | Handle bird class and it movement, Make Powerpoint           |   Minh Trung   |      |      25      |
+| 3     | Handle pipe class and it movement, UML diagram               |   Quang Trí    |      |      25      |
+| 4     | Design UI, Handle Collision and Score Class, Make Powerpoint |     Anh Tú     |      |      25      |  
 
 ## GAME <a name="Game"></a> :rocket:
 ## Requirement for software:  
 
 ### Environment :computer:
-Language: Java  
+Language: Java   
+Platform: IntelliJ IDEA, Visual Studio Code, Eclipse IDE 
 Library: javax, Java Standard Library  
-API: Abstract Window Toolkit
+API: Abstract Window Toolkit (AWT)
 
 ### How to play:  
 The bird will be controlled by the player to move up and down (using the space or up button) to cross the pipes. Each pass will be scored, if it hits the pipe or falls to the ground, it will not be scored and the game ends.
@@ -57,23 +58,26 @@ The bird will be controlled by the player to move up and down (using the space o
 [Readme](README.md)  
 
 ### Feature:  
-**Main Feature:**
+**Main Feature:**  
 - Use space press/ UP button to control bird speed and height
-- Record score 
+- Record score
 - Beautiful universe theme
 - Check when bird collide with pipe
-**Extra feature:**
+
+**Extra feature:**  
+
 - Different type of pipes: normal, hover, moving pipe
-- Sound effects
+- Sound effects    
+
 **Future feature:**
 - Different bird skins
 - Ranking
 - Boss fighter (after getting over 100 pipes)
-- Different game maps
+- Different game maps   
 ...
 
-**Discuss challenges in the project:**
-- The point of challenge was that we didn't know where to start, even though we figured out the logic to make the game work very early on. Also, putting the classroom theories into practice was a bit confusing for us at first.
+**CHALLENGES:**
+- The point of challenge was that we didn't know where to start, even though we figured out the logic to make the game work very early on. Also, putting the theories into practice was a bit confusing for us at first.
 
 **Result and Conclusion**  
 -  Luckily, we found excellent and detailed references that helped us refine our original idea and add cool features. 
@@ -89,16 +93,16 @@ Normal pipe
   
 Moving Pipe  
 ![](../../Downloads/OOP_PROJECT-_FLAPPY-BIRD_-BUILD-SUCESSFUL-TEAM-2022-06-01-13-28-18_Trim.gif)
-### Demo :arrow_forward:
+### Demo :arrow_forward:  
 ![](../../Downloads/OOP_PROJECT-_FLAPPY-BIRD_-BUILD-SUCESSFUL-TEAM-2022-06-03-21-16-23_Trim.gif)
 ### What we have learned :pencil:  
 Skills: Work in GitHub, Trello, Draw.io, Canva, Google docx,...handle some bugs and practice teamwork.   
 Knowledge: Inheritance, Thread, Probability, UI Design, Design Pattern, Animation, UML Diagram
 
-## How to play <a name="How to play"></a> 
-Step 1: Clone following repository to your local  [FlappyBird_repository](https://github.com/mtnguyenquynh/OOP_Project_flappyBird.git)
+## Installation <a name="Installation"></a> 
+Step 1: Clone following repository to your local  [FlappyBird_repository](https://github.com/mtnguyenquynh/OOP_Project_flappyBird.git)  
     IntelliJ: Copy the repository URL --> Open IntelliJ IDEA --> Choose "Get from VCS" --> Paste the URL on your clipboard to "URL" field --> Press Enter or Clone  
-    Eclipse: Copy the repository URL --> Open Eclipse IDE -->  Go to File --> Choose Import --> In folder Git choose Project from Git --> Choose Clone URL and click Next--> Paste URL in "URL" field and click Next --> Choose branch "main" and click Next --> Finish
+    Eclipse: Copy the repository URL --> Open Eclipse IDE -->  Go to File --> Choose Import --> In folder Git choose Project from Git --> Choose Clone URL and click Next--> Paste URL in "URL" field and click Next --> Choose branch "main" and click Next --> Finish   
     VSCode: Copy the repository URL --> Open VSCode --> Ctrl + Shift + P --> Type "gitcl" --> Choose "Git Clone" and paste the URL in
 Step 2: Open "src" package --> Choose "App" class in "app" folder   
 Step 3: Enjoy the game and reach the high score

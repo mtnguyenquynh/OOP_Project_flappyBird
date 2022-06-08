@@ -6,8 +6,12 @@
   <component name="ChangeListManager">
     <list default="true" id="afde5f60-6009-4fb9-a09f-2748f6e81923" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/GameElementLayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/GameElementLayer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/PipePool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/PipePool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/app/Game.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/BirdKeyListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/BirdKeyListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameElementLayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/GameElementLayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/PipePool.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/OOP_Project_flappyBird/component/PipePool.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/Game.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +36,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProblemsViewState">
-    <option name="selectedTabId" value="ProjectErrors" />
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="2" />
@@ -43,21 +47,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\WIN 10\IdeaProjects\OOP_Project_flappyBird\resources\wav" />
