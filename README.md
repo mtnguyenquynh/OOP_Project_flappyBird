@@ -53,7 +53,7 @@ The bird will be controlled by the player to move up and down (using the space o
 
 ### UML Class Diagrams  
 ### UML 
-![image](https://user-images.githubusercontent.com/92241395/172896368-0fddb937-acee-4e0b-8ee8-cd948f89fb88.png)
+![52d5f70401f2c1ac98e3](https://user-images.githubusercontent.com/92241395/172896650-02a041d9-4bf6-47f3-bdc7-5cb5c6490599.jpg)
 ### Project Page
 [OOP_Project_FlappyBird](https://github.com/mtnguyenquynh/OOP_Project_flappyBird.git)  
 ### README
