@@ -18,7 +18,7 @@
 |:------|:-----------------------|:-----------:|:--------------------------------:|:---------------------------|
 | 1     | Nguyễn Quỳnh Mai Thanh | ITITIU20309 | ititiu20309@student.hcmiu.edu.vn | mtnguyenquynh/ vickysmilen |
 | 2     | Nguyễn Trần Minh Trung | ITITIU20332 | ititiu20332@student.hcmiu.edu.vn |                            |
-| 3     | Trần Quang Trí         | ITITIU20325 | ititiu20325@student.hcmiu.edu.vn |                            |
+| 3     | Trần Quang Trí         | ITITIU20325 | ititiu20325@student.hcmiu.edu.vn | EricRuincandel             |
 | 4     | Nguyễn Huỳnh Anh Tú    | ITITIU20337 | ititiu20337@student.hcmiu.edu.vn |                            |           
 
 ### Topic **Flappy Bird**  
@@ -106,8 +106,6 @@ Step 1: Clone following repository to your local  [FlappyBird_repository](https:
     VSCode: Copy the repository URL --> Open VSCode --> Ctrl + Shift + P --> Type "gitcl" --> Choose "Git Clone" and paste the URL in
 Step 2: Open "src" package --> Choose "App" class in "app" folder   
 Step 3: Enjoy the game and reach the high score
-
-* link to dowload javax: https://jar-download.com/maven-repository-class-search.php?search_box=javax.sound.sampled.AudioSystem&fbclid=IwAR0t30x9M1GhRod5D8Zq7A6u9DmsmXrpbrYCqZ_HfgCz6zID3R0oZ23-_FY
 
 ## References <a name="References"></a> :book:
 Thanks to the incredibly rich resources that helped us make this project happen 
