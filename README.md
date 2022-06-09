@@ -114,11 +114,9 @@ Knowledge: Inheritance, Thread, Probability, UI Design, Design Pattern, Animatio
 Step 1: Clone following repository to your local  [FlappyBird_repository](https://github.com/mtnguyenquynh/OOP_Project_flappyBird.git)  
     IntelliJ: Copy the repository URL --> Open IntelliJ IDEA --> Choose "Get from VCS" --> Paste the URL on your clipboard to "URL" field --> Press Enter or Clone  
     Eclipse: Copy the repository URL --> Open Eclipse IDE -->  Go to File --> Choose Import --> In folder Git choose Project from Git --> Choose Clone URL and click Next--> Paste URL in "URL" field and click Next --> Choose branch "main" and click Next --> Finish   
-    VSCode: Copy the repository URL --> Open VSCode --> Ctrl + Shift + P --> Type "gitcl" --> Choose "Git Clone" and paste the URL in
-
-Step 2: Open "src" package --> Choose "App" class in "app" folder   
-Step 3: Enjoy the game and reach the high score
-
+    VSCode: Copy the repository URL --> Open VSCode --> Ctrl + Shift + P --> Type "gitcl" --> Choose "Git Clone" and paste the URL in   
+    Step 2: Open "src" package --> Choose "App" class in "app" folder   
+    Step 3: Enjoy the game and reach the high score
 ## References <a name="References"></a> :book:
 Thanks to the incredibly rich resources that helped us make this project happen 
 1. [kingyuluk](https://github.com/kingyuluk/FlappyBird.git)  
