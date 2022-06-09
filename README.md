@@ -31,7 +31,7 @@ The reason we chose Flappy Bird is that it is a simple game that fully demonstra
 | 1     | Write Readme, Make Sound Effect, UML diagram, Design UI      |   Mai Thanh    |          25      |
 | 2     | Handle bird class and it movement, Make Powerpoint           |   Minh Trung   |          25      |
 | 3     | Handle pipe class and it movement, UML diagram, Game Layer   |   Quang Trí    |      25          |
-| 4     | Design UI, Handle Collision and Score Class, Make Powerpoint |     Anh Tú     |          25      |  
+| 4     | Design UI, Handle Collision and Score Class, Make Powerpoint, Clouds |     Anh Tú     |          25      |  
 
 ## GAME <a name="Game"></a> :rocket:
 ## Requirement for software:  
