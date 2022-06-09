@@ -115,6 +115,7 @@ Step 1: Clone following repository to your local  [FlappyBird_repository](https:
     IntelliJ: Copy the repository URL --> Open IntelliJ IDEA --> Choose "Get from VCS" --> Paste the URL on your clipboard to "URL" field --> Press Enter or Clone  
     Eclipse: Copy the repository URL --> Open Eclipse IDE -->  Go to File --> Choose Import --> In folder Git choose Project from Git --> Choose Clone URL and click Next--> Paste URL in "URL" field and click Next --> Choose branch "main" and click Next --> Finish   
     VSCode: Copy the repository URL --> Open VSCode --> Ctrl + Shift + P --> Type "gitcl" --> Choose "Git Clone" and paste the URL in
+
 Step 2: Open "src" package --> Choose "App" class in "app" folder   
 Step 3: Enjoy the game and reach the high score
 
