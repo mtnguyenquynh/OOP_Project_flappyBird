@@ -100,12 +100,12 @@ The bird will be controlled by the player to move up and down (using the space o
 Normal pipe  
 ![](https://i.imgur.com/DuZzVLc.png)  
 
-### Cloud
-![Screen Shot 2022-06-10 at 00 20 10](https://user-images.githubusercontent.com/91893958/172906918-e1b2f6a4-11b8-43f7-ada2-0b7d3562eedd.png)
-
-  
 Moving Pipe  
 ![OOP_PROJECT-_FLAPPY-BIRD_-BUILD-SUCESSFUL-TEAM-2022-06-01-13-28-18_Trim](https://user-images.githubusercontent.com/92241395/172897514-42500700-eb6b-43dc-8202-596594dbc2cc.gif)
+
+### Cloud
+![Screen Shot 2022-06-10 at 00 20 10](https://user-images.githubusercontent.com/91893958/172907100-c5158dec-5fc6-4922-970a-05d7ca18f5a2.png)
+
 ### Demo :arrow_forward:  
 ![OOP_PROJECT 'FLAPPY BIRD' BUILD SUCESSFUL TEAM 2022-06-09 23-33-39 (online-video-cutter com)](https://user-images.githubusercontent.com/92241395/172900318-9516f069-0b1c-46dd-b3b1-063fb4652feb.gif)
 
