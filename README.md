@@ -8,7 +8,8 @@
 2. [Game](#Game)
 3. [Screenshot](#Screenshot)
 4. [Installation](#Installation)
-5. [References](#References)
+5. [PowerPoint](#PowerPoint)
+6. [References](#References)
 
 # OOP_Project_flappyBird  ![alt](https://i.imgur.com/aDQhdFK.png)
 ## Introduction <a name="Introduction"></a> :smile:
