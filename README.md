@@ -26,12 +26,12 @@ Why we choose this topic :question:
 The reason we chose Flappy Bird is that it is a simple game that fully demonstrates the essence of object-oriented programming. At the same time, we are also very curious about how the game set the Guinness World Record 2016 in terms of downloads and the huge revenue earned from it. We hope from this simple yet addictive game we can develop more features for it and keep this fun game.  
   
 ### Tasks  
-| Index | Task                                                         | PersonInCharge | Note | Contribution |
-|:------|:-------------------------------------------------------------|:--------------:|:----:|:------------:|
-| 1     | Write Readme, Make Sound Effect, UML diagram, Design UI      |   Mai Thanh    |      |      25      |
-| 2     | Handle bird class and it movement, Make Powerpoint           |   Minh Trung   |      |      25      |
-| 3     | Handle pipe class and it movement, UML diagram, Game Layer               |   Quang Trí    |      |      25      |
-| 4     | Design UI, Handle Collision and Score Class, Make Powerpoint |     Anh Tú     |      |      25      |  
+| Index | Task                                                         | PersonInCharge | Contribution |
+|:------|:-------------------------------------------------------------|:--------------:|:------------:|
+| 1     | Write Readme, Make Sound Effect, UML diagram, Design UI      |   Mai Thanh    |          25      |
+| 2     | Handle bird class and it movement, Make Powerpoint           |   Minh Trung   |          25      |
+| 3     | Handle pipe class and it movement, UML diagram, Game Layer   |   Quang Trí    |      25          |
+| 4     | Design UI, Handle Collision and Score Class, Make Powerpoint |     Anh Tú     |          25      |  
 
 ## GAME <a name="Game"></a> :rocket:
 ## Requirement for software:  
