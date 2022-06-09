@@ -104,7 +104,7 @@ Normal pipe
 Moving Pipe  
 ![OOP_PROJECT-_FLAPPY-BIRD_-BUILD-SUCESSFUL-TEAM-2022-06-01-13-28-18_Trim](https://user-images.githubusercontent.com/92241395/172897514-42500700-eb6b-43dc-8202-596594dbc2cc.gif)
 ### Demo :arrow_forward:  
-![](../../Downloads/OOP_PROJECT-_FLAPPY-BIRD_-BUILD-SUCESSFUL-TEAM-2022-06-03-21-16-23_Trim.gif)
+https://user-images.githubusercontent.com/92241395/172898860-ae8f6736-352f-45bb-81d3-3bb997a33621.mp4
 ### What we have learned :pencil:  
 Skills: Work in GitHub, Trello, Draw.io, Canva, Google docx,...handle some bugs and practice teamwork.   
 Knowledge: Inheritance, Thread, Probability, UI Design, Design Pattern, Animation, UML Diagram
