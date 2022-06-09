@@ -17,9 +17,9 @@
 | Index | Name                   |     ID      |              Email               | Github account             |
 |:------|:-----------------------|:-----------:|:--------------------------------:|:---------------------------|
 | 1     | Nguyễn Quỳnh Mai Thanh | ITITIU20309 |     mtnguyenquynh@gmail.com      | mtnguyenquynh/ vickysmilen |
-| 2     | Nguyễn Trần Minh Trung | ITITIU20332 |                                  |                            |
+| 2     | Nguyễn Trần Minh Trung | ITITIU20332 | ititiu20332@student.hcmiu.edu.vn |                            |
 | 3     | Trần Quang Trí         | ITITIU20325 | ititiu20325@student.hcmiu.edu.vn |                            |
-| 4     | Nguyễn Huỳnh Anh Tú    | ITITIU20337 |                                  |                            |           
+| 4     | Nguyễn Huỳnh Anh Tú    | ITITIU20337 | ititiu20337@student.hcmiu.edu.vn |                            |           
 
 ### Topic **Flappy Bird**  
 Why we choose this topic :question:  
