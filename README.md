@@ -37,9 +37,17 @@ The reason we chose Flappy Bird is that it is a simple game that fully demonstra
 ## Requirement for software:  
 
 ### Environment :computer:
-Language: Java   
-Platform: IntelliJ IDEA, Visual Studio Code, Eclipse IDE 
-Library: javax, Java Standard Library  
+Language: Java
+
+Platform: 
+  IntelliJ IDEA
+  Visual Studio Code
+  Eclipse IDE 
+  
+Library: 
+  javax
+  Java Standard Library  
+  
 API: Abstract Window Toolkit (AWT)
 
 ### How to play:  
