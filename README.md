@@ -77,7 +77,8 @@ The bird will be controlled by the player to move up and down (using the space o
 **Extra feature:**  
 
 - Different type of pipes: normal, hover, moving pipe
-- Sound effects    
+- Sound effects
+- Amazing bird movement    
 
 **Future feature:**
 - Different bird skins
