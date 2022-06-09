@@ -116,7 +116,7 @@ Step 1: Clone following repository to your local  [FlappyBird_repository](https:
     VSCode: Copy the repository URL --> Open VSCode --> Ctrl + Shift + P --> Type "gitcl" --> Choose "Git Clone" and paste the URL in   
     Step 2: Open "src" package --> Choose "App" class in "app" folder   
     Step 3: Enjoy the game and reach the high score
-## PowerPoint <a name="PowerPoint"></a> 
+## PowerPoint <a name="PowerPoint"></a> 📖
    Support: Canva
    
    ![Screen Shot 2022-06-10 at 00 32 48](https://user-images.githubusercontent.com/91893958/172908915-1fe81f9b-21d7-4721-b4e7-9b56c97d7446.png)
