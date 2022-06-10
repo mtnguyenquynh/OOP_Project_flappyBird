@@ -3,7 +3,8 @@
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE) ![GitHub top language](https://img.shields.io/github/languages/top/mtnguyenquynh/OOP_Project_flappyBird) ![GitHub branch checks state](https://img.shields.io/github/checks-status/mtnguyenquynh/OOP_Project_flappyBird/main)
 ![GitHub last commit](https://img.shields.io/github/last-commit/mtnguyenquynh/OOP_Project_flappyBird)
   
-# Table of contents :round_pushpin:
+# Table of contents :round_pushpin:  
+
 1. [Introduction](#Introduction)
 2. [Game](#Game)
 3. [Screenshot](#Screenshot)
