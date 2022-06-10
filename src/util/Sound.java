@@ -68,21 +68,5 @@ public class Sound {
             throw new RuntimeException(e);
         }
     }
-
-    public static void playIntro() {
-        try {
-            introSound = AudioSystem.getAudioInputStream(new File("resources/wav/intro.wav"));
-            clip = AudioSystem.getClip();
-
-            clip.open(introSound);
-            clip.start();
-
-        } catch (IOException ignored) {
-        } catch (UnsupportedAudioFileException e) {
-            throw new RuntimeException(e);
-        } catch (LineUnavailableException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }
 
