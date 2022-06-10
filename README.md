@@ -18,7 +18,7 @@
 | Index | Name                   |     ID      |              Email               | Github account             |
 |:------|:-----------------------|:-----------:|:--------------------------------:|:---------------------------|
 | 1     | Nguyễn Quỳnh Mai Thanh | ITITIU20309 | ititiu20309@student.hcmiu.edu.vn | mtnguyenquynh/ vickysmilen |
-| 2     | Nguyễn Trần Minh Trung | ITITIU20332 | ititiu20332@student.hcmiu.edu.vn |                            |
+| 2     | Nguyễn Trần Minh Trung | ITITIU20332 | ititiu20332@student.hcmiu.edu.vn | trungnguyen29775           |
 | 3     | Trần Quang Trí         | ITITIU20325 | ititiu20325@student.hcmiu.edu.vn | EricRuincandel             |
 | 4     | Nguyễn Huỳnh Anh Tú    | ITITIU20337 | ititiu20337@student.hcmiu.edu.vn |                            |           
 
