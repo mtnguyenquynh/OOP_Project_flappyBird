@@ -125,7 +125,7 @@ Step 1: Clone following repository to your local  [FlappyBird_repository](https:
    
    ![Screen Shot 2022-06-10 at 00 32 48](https://user-images.githubusercontent.com/91893958/172908915-1fe81f9b-21d7-4721-b4e7-9b56c97d7446.png)
    
-   Direct: https://www.canva.com/design/DAFCjRZZjYY/kMhB-m3y_R3ZHHKiRMRISA/edit
+   Direct: [https://www.canva.com/design/DAFCjRZZjYY/kMhB-m3y_R3ZHHKiRMRISA/edit](https://www.canva.com/design/DAFCjRZZjYY/kMhB-m3y_R3ZHHKiRMRISA/edit)
    
 ## References <a name="References"></a> :book:
 Thanks to the incredibly rich resources that helped us make this project happen 
