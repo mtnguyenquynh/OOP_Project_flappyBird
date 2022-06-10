@@ -61,6 +61,7 @@ The bird will be controlled by the player to move up and down (using the space o
 - The logic of creating the flying bird effect: the bird will be animated by loading 16 consecutive bird image frames.
 
 ### UML Class Diagrams  
+
 ![52d5f70401f2c1ac98e3](https://user-images.githubusercontent.com/92241395/172896650-02a041d9-4bf6-47f3-bdc7-5cb5c6490599.jpg)
 ### Project Page
 [OOP_Project_FlappyBird](https://github.com/mtnguyenquynh/OOP_Project_flappyBird.git)  
